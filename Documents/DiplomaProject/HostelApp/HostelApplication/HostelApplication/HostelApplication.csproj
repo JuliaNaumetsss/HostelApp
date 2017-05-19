@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DE2C2A8-E79C-4A1A-8035-28F4091D5C18}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HostelApplication</RootNamespace>
+    <AssemblyName>HostelApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.office.interop.word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\microsoft.office.interop.word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\PaymentPage.cs" />
+    <Compile Include="BusinessLayer\WorkedHoursPage.cs" />
+    <Compile Include="DataAccessLayer\PaymentHandler.cs" />
+    <Compile Include="DataAccessLayer\WorkedHoursHandler.cs" />
+    <Compile Include="UserInterfaceLayer\ArrearsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\ArrearsForm.Designer.cs">
+      <DependentUpon>ArrearsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encoder\EncryptionClass.cs" />
+    <Compile Include="Enums\EmployeeEnum.cs" />
+    <Compile Include="Enums\FloorEnum.cs" />
+    <Compile Include="Enums\PersonalInfoEnum.cs" />
+    <Compile Include="Enums\RoomEnum.cs" />
+    <Compile Include="Enums\StudentEnum.cs" />
+    <Compile Include="Enums\TablesEnum.cs" />
+    <Compile Include="Enums\UserEnum.cs" />
+    <Compile Include="Enums\UserTypeEnum.cs" />
+    <Compile Include="UserInterfaceLayer\WorkedHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\WorkedHoursForm.Designer.cs">
+      <DependentUpon>WorkedHoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DataBaseConnector.cs" />
+    <Compile Include="UserInterfaceLayer\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AddInformationHandler.cs" />
+    <Compile Include="DataAccessLayer\EditInformationHandler.cs" />
+    <Compile Include="DataAccessLayer\FloorHandler.cs" />
+    <Compile Include="DataAccessLayer\PersonalInfoHandler.cs" />
+    <Compile Include="DataAccessLayer\RemoveInformationHandler.cs" />
+    <Compile Include="DataAccessLayer\RoomHandler.cs" />
+    <Compile Include="DataAccessLayer\UserHandler.cs" />
+    <Compile Include="Handlers\ImageHandler.cs" />
+    <Compile Include="UserInterfaceLayer\InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLayer\AddEmployeePage.cs" />
+    <Compile Include="BusinessLayer\AddStudentPage.cs" />
+    <Compile Include="BusinessLayer\EditEmployeePage.cs" />
+    <Compile Include="BusinessLayer\EditStudentPage.cs" />
+    <Compile Include="BusinessLayer\HomePage.cs" />
+    <Compile Include="UserInterfaceLayer\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Estimation.cs" />
+    <Compile Include="Models\Floor.cs" />
+    <Compile Include="Models\Inspection.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\ResidenceHistorycs.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Thing.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserQuestion.cs" />
+    <Compile Include="Models\WorkedHours.cs" />
+    <Compile Include="BusinessLayer\RemoveEmployeePage.cs" />
+    <Compile Include="BusinessLayer\RemoveStudentPage.cs" />
+    <Compile Include="BusinessLayer\UsersInformationPage.cs" />
+    <Compile Include="BusinessLayer\ChangePasswordPage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataAccessLayer\UserTypeHandler.cs" />
+    <Compile Include="Handlers\ReportGenerator\ExcelFileCreator.cs" />
+    <Compile Include="Handlers\ReportGenerator\WordFileCreator.cs" />
+    <Compile Include="UserInterfaceLayer\UserAdditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UserAdditionForm.Designer.cs">
+      <DependentUpon>UserAdditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UserEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UserEditingForm.Designer.cs">
+      <DependentUpon>UserEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UserRemoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UserRemoveForm.Designer.cs">
+      <DependentUpon>UserRemoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ConfigReader.cs" />
+    <EmbeddedResource Include="UserInterfaceLayer\ArrearsForm.resx">
+      <DependentUpon>ArrearsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserInterfaceLayer\UserAdditionForm.resx">
+      <DependentUpon>UserAdditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\UserEditingForm.resx">
+      <DependentUpon>UserEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\UserRemoveForm.resx">
+      <DependentUpon>UserRemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\WorkedHoursForm.resx">
+      <DependentUpon>WorkedHoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
