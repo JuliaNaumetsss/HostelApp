@@ -54,6 +54,25 @@ namespace HostelApplication.DataAccessLayer
             {
                 connector = new DataBaseConnector();
                 connector.OpenConnection();
+
+                // Add info to Estimation table
+                EstimationHandler estimationHandler = new EstimationHandler();
+                estimationHandler.AddEstimationInfo(inspection.Estimation);
+
+                // Get last estimation Id
+                int estimationId = estimationHandler.GetLastEstimationId();
+
+                // Add info to Inspection table
+                this.AddInfoToInspectionInfo(inspection.InspectionDate, inspection.Room, estimationId);
+
+                // Get last inspection Id
+                int inspectionId = this.GetLastInspectionId();
+
+                // Add info to Inspection_Employee table
+                foreach (string login in inspection.EmployeeLoginList)
+                {
+                    this.AddNoteToInspectionEmployeeTable(login, inspectionId);
+                }
             }
             catch(SqlException ex)
             {
@@ -66,5 +85,72 @@ namespace HostelApplication.DataAccessLayer
             }
             return isSuccess;
         }
+
+        private bool AddInfoToInspectionInfo(string date, string room, int estimationId)
+        {            
+            string query = "INSERT INTO [Inspection] (inspectionDate, roomId, estimationId) " +
+                $"VALUES ('{date}', '{room}', '{estimationId}')";
+            return this.AddRecord(query);
+        }
+
+        private int GetLastInspectionId()
+        {
+            int index = -1;
+            DataBaseConnector connector = null;
+            try
+            {
+                connector = new DataBaseConnector();
+                connector.OpenConnection();
+                SqlDataAdapter sqlAdapter = new SqlDataAdapter($"SELECT [Inspection].idInspection FROM [Inspection]", connector.Connection);
+                DataSet ds = new DataSet();
+                sqlAdapter.Fill(ds, "Inspection");
+                DataRow row = ds.Tables["Inspection"].Rows[ds.Tables["Inspection"].Rows.Count - 1];
+                int.TryParse(row["idInspection"].ToString(), out index);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                connector?.CloseConnection();
+            }
+            return index;
+        }
+
+        private bool AddNoteToInspectionEmployeeTable(string employeeId, int inspectionId)
+        {
+            string query = "INSERT INTO [Inspection_Employee] (employeeId, inspectionId) " +
+                $"VALUES ('{employeeId}', '{inspectionId}')";
+            return this.AddRecord(query);
+        }
+
+        private bool AddRecord(string query)
+        {
+            bool isSuccess = true;
+            DataBaseConnector connector = null;
+            try
+            {
+                connector = new DataBaseConnector();
+                connector.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connector.Connection;
+
+                // Insert into personal info
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                isSuccess = false;
+                Console.WriteLine(ex.Message.ToString());
+            }
+            finally
+            {
+                connector?.CloseConnection();
+            }
+            return isSuccess;
+        }
     }
+    
 }

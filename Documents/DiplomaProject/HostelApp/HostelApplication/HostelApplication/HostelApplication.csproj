@@ -61,6 +61,7 @@
     <Compile Include="BusinessLayer\InspectionPage.cs" />
     <Compile Include="BusinessLayer\PaymentPage.cs" />
     <Compile Include="BusinessLayer\WorkedHoursPage.cs" />
+    <Compile Include="DataAccessLayer\EstimationHandler.cs" />
     <Compile Include="DataAccessLayer\InspectionHandler.cs" />
     <Compile Include="DataAccessLayer\PaymentHandler.cs" />
     <Compile Include="DataAccessLayer\WorkedHoursHandler.cs" />

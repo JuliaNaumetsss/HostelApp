@@ -8,9 +8,7 @@ namespace HostelApplication.Model
 {
     public class Inspection
     {
-        public int InspectionId { get; set; }
-
-        public DateTime InspectionDate { get; set; }
+        public string InspectionDate { get; set; }
 
         public string Room { get; set; }
 
@@ -28,5 +26,7 @@ namespace HostelApplication.Model
                 value = estimationRoom;
             }
         }
+
+        public List<string> EmployeeLoginList { get; set; }
     }
 }

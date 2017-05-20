@@ -8,8 +8,6 @@ namespace HostelApplication.Model
 {
     public class Estimation
     {
-        public int EstimationId { get; set; }
-
         public int Restroom { get; set; }
 
         public int Bathroom { get; set; }
