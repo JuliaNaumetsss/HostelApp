@@ -207,5 +207,11 @@ namespace HostelApplication
             WorkedHoursForm form = new WorkedHoursForm(UserLogin, "payment");
             form.Show();
         }
+
+        private void InspectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InspectionForm inspectionForm = new InspectionForm(this.UserLogin);
+            inspectionForm.Show();
+        }
     }
 }

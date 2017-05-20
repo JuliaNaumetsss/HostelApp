@@ -261,6 +261,7 @@
             this.InspectionToolStripMenuItem.Name = "InspectionToolStripMenuItem";
             this.InspectionToolStripMenuItem.Size = new System.Drawing.Size(260, 30);
             this.InspectionToolStripMenuItem.Text = "Проверка блока";
+            this.InspectionToolStripMenuItem.Click += new System.EventHandler(this.InspectionToolStripMenuItem_Click);
             // 
             // WorkedHoursToolStripMenuItem
             // 
@@ -405,7 +406,7 @@
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-          //  this.Name = "MainForm";
+         //   this.Name = "MainForm";
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

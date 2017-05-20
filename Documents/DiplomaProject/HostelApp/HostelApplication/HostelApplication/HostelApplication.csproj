@@ -58,8 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\InspectionPage.cs" />
     <Compile Include="BusinessLayer\PaymentPage.cs" />
     <Compile Include="BusinessLayer\WorkedHoursPage.cs" />
+    <Compile Include="DataAccessLayer\InspectionHandler.cs" />
     <Compile Include="DataAccessLayer\PaymentHandler.cs" />
     <Compile Include="DataAccessLayer\WorkedHoursHandler.cs" />
     <Compile Include="UserInterfaceLayer\ArrearsForm.cs">
@@ -83,6 +85,12 @@
     <Compile Include="Enums\TablesEnum.cs" />
     <Compile Include="Enums\UserEnum.cs" />
     <Compile Include="Enums\UserTypeEnum.cs" />
+    <Compile Include="UserInterfaceLayer\InspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\InspectionForm.Designer.cs">
+      <DependentUpon>InspectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterfaceLayer\WorkedHoursForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterfaceLayer\InformationForm.resx">
       <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\InspectionForm.resx">
+      <DependentUpon>InspectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterfaceLayer\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
