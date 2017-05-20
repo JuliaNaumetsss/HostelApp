@@ -60,11 +60,19 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\InspectionPage.cs" />
     <Compile Include="BusinessLayer\PaymentPage.cs" />
+    <Compile Include="BusinessLayer\ThingPage.cs" />
     <Compile Include="BusinessLayer\WorkedHoursPage.cs" />
     <Compile Include="DataAccessLayer\EstimationHandler.cs" />
     <Compile Include="DataAccessLayer\InspectionHandler.cs" />
     <Compile Include="DataAccessLayer\PaymentHandler.cs" />
+    <Compile Include="DataAccessLayer\ThingHandler.cs" />
     <Compile Include="DataAccessLayer\WorkedHoursHandler.cs" />
+    <Compile Include="UserInterfaceLayer\AddThingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\AddThingForm.Designer.cs">
+      <DependentUpon>AddThingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterfaceLayer\ArrearsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,7 +146,7 @@
     <Compile Include="Models\ResidenceHistorycs.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\Thing.cs" />
+    <Compile Include="Models\ThingEmployee.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserQuestion.cs" />
     <Compile Include="Models\WorkedHours.cs" />
@@ -170,6 +178,9 @@
       <DependentUpon>UserRemoveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConfigReader.cs" />
+    <EmbeddedResource Include="UserInterfaceLayer\AddThingForm.resx">
+      <DependentUpon>AddThingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterfaceLayer\ArrearsForm.resx">
       <DependentUpon>ArrearsForm.cs</DependentUpon>
     </EmbeddedResource>

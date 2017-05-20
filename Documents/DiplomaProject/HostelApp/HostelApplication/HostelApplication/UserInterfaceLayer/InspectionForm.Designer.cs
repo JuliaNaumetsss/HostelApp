@@ -33,11 +33,18 @@
             this.cmbRoom = new System.Windows.Forms.ComboBox();
             this.cmbRestRoom = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbBathroom = new System.Windows.Forms.ComboBox();
-            this.cmbHall = new System.Windows.Forms.ComboBox();
-            this.cmbKitchen = new System.Windows.Forms.ComboBox();
-            this.cmbRoomA = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmbRoomB = new System.Windows.Forms.ComboBox();
+            this.cmbRoomA = new System.Windows.Forms.ComboBox();
+            this.cmbKitchen = new System.Windows.Forms.ComboBox();
+            this.cmbHall = new System.Windows.Forms.ComboBox();
+            this.cmbBathroom = new System.Windows.Forms.ComboBox();
             this.tbFirstEmployee = new System.Windows.Forms.TextBox();
             this.cmbSecondEmployee = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,13 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.buttonAddInspection = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,7 +88,6 @@
             this.cmbRestRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRestRoom.FormattingEnabled = true;
             this.cmbRestRoom.Items.AddRange(new object[] {
-            "-",
             "1",
             "2",
             "3",
@@ -119,60 +118,89 @@
             this.panel1.Size = new System.Drawing.Size(328, 348);
             this.panel1.TabIndex = 4;
             // 
-            // cmbBathroom
+            // label12
             // 
-            this.cmbBathroom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBathroom.FormattingEnabled = true;
-            this.cmbBathroom.Items.AddRange(new object[] {
-            "-",
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(54, 307);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 20);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Комната \'б\'";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 261);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 20);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Комната \'а\'";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 210);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Кухня";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(46, 164);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 20);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Коридор";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(46, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Ванная комната";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(262, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Оценки за санитарное состояние";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Уборная комната";
+            // 
+            // cmbRoomB
+            // 
+            this.cmbRoomB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoomB.FormattingEnabled = true;
+            this.cmbRoomB.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.cmbBathroom.Location = new System.Drawing.Point(187, 110);
-            this.cmbBathroom.Name = "cmbBathroom";
-            this.cmbBathroom.Size = new System.Drawing.Size(121, 28);
-            this.cmbBathroom.TabIndex = 4;
-            // 
-            // cmbHall
-            // 
-            this.cmbHall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHall.FormattingEnabled = true;
-            this.cmbHall.Items.AddRange(new object[] {
-            "-",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbHall.Location = new System.Drawing.Point(187, 156);
-            this.cmbHall.Name = "cmbHall";
-            this.cmbHall.Size = new System.Drawing.Size(121, 28);
-            this.cmbHall.TabIndex = 5;
-            // 
-            // cmbKitchen
-            // 
-            this.cmbKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKitchen.FormattingEnabled = true;
-            this.cmbKitchen.Items.AddRange(new object[] {
-            "-",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbKitchen.Location = new System.Drawing.Point(187, 207);
-            this.cmbKitchen.Name = "cmbKitchen";
-            this.cmbKitchen.Size = new System.Drawing.Size(121, 28);
-            this.cmbKitchen.TabIndex = 6;
+            this.cmbRoomB.Location = new System.Drawing.Point(187, 302);
+            this.cmbRoomB.Name = "cmbRoomB";
+            this.cmbRoomB.Size = new System.Drawing.Size(121, 28);
+            this.cmbRoomB.TabIndex = 8;
             // 
             // cmbRoomA
             // 
             this.cmbRoomA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoomA.FormattingEnabled = true;
             this.cmbRoomA.Items.AddRange(new object[] {
-            "-",
             "1",
             "2",
             "3",
@@ -183,21 +211,50 @@
             this.cmbRoomA.Size = new System.Drawing.Size(121, 28);
             this.cmbRoomA.TabIndex = 7;
             // 
-            // cmbRoomB
+            // cmbKitchen
             // 
-            this.cmbRoomB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRoomB.FormattingEnabled = true;
-            this.cmbRoomB.Items.AddRange(new object[] {
-            "-",
+            this.cmbKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKitchen.FormattingEnabled = true;
+            this.cmbKitchen.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.cmbRoomB.Location = new System.Drawing.Point(187, 302);
-            this.cmbRoomB.Name = "cmbRoomB";
-            this.cmbRoomB.Size = new System.Drawing.Size(121, 28);
-            this.cmbRoomB.TabIndex = 8;
+            this.cmbKitchen.Location = new System.Drawing.Point(187, 207);
+            this.cmbKitchen.Name = "cmbKitchen";
+            this.cmbKitchen.Size = new System.Drawing.Size(121, 28);
+            this.cmbKitchen.TabIndex = 6;
+            // 
+            // cmbHall
+            // 
+            this.cmbHall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHall.FormattingEnabled = true;
+            this.cmbHall.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbHall.Location = new System.Drawing.Point(187, 156);
+            this.cmbHall.Name = "cmbHall";
+            this.cmbHall.Size = new System.Drawing.Size(121, 28);
+            this.cmbHall.TabIndex = 5;
+            // 
+            // cmbBathroom
+            // 
+            this.cmbBathroom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBathroom.FormattingEnabled = true;
+            this.cmbBathroom.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbBathroom.Location = new System.Drawing.Point(187, 110);
+            this.cmbBathroom.Name = "cmbBathroom";
+            this.cmbBathroom.Size = new System.Drawing.Size(121, 28);
+            this.cmbBathroom.TabIndex = 4;
             // 
             // tbFirstEmployee
             // 
@@ -260,69 +317,6 @@
             this.label5.Size = new System.Drawing.Size(175, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Второй проверяющий";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Уборная комната";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(262, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Оценки за санитарное состояние";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Ванная комната";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(46, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 20);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Коридор";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 210);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Кухня";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 261);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 20);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Комната \'а\'";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(54, 307);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 20);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Комната \'б\'";
             // 
             // buttonAddInspection
             // 

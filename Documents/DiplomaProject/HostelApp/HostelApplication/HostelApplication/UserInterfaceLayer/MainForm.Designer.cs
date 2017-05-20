@@ -68,6 +68,7 @@
             this.RoomNumberEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelLogin = new System.Windows.Forms.Label();
+            this.AddThingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
@@ -251,7 +252,8 @@
             this.OtherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.InspectionToolStripMenuItem,
             this.WorkedHoursToolStripMenuItem,
-            this.PaymentToolStripMenuItem});
+            this.PaymentToolStripMenuItem,
+            this.AddThingsToolStripMenuItem});
             this.OtherToolStripMenuItem.Name = "OtherToolStripMenuItem";
             this.OtherToolStripMenuItem.Size = new System.Drawing.Size(158, 29);
             this.OtherToolStripMenuItem.Text = "Другие функции";
@@ -259,21 +261,21 @@
             // InspectionToolStripMenuItem
             // 
             this.InspectionToolStripMenuItem.Name = "InspectionToolStripMenuItem";
-            this.InspectionToolStripMenuItem.Size = new System.Drawing.Size(260, 30);
+            this.InspectionToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
             this.InspectionToolStripMenuItem.Text = "Проверка блока";
             this.InspectionToolStripMenuItem.Click += new System.EventHandler(this.InspectionToolStripMenuItem_Click);
             // 
             // WorkedHoursToolStripMenuItem
             // 
             this.WorkedHoursToolStripMenuItem.Name = "WorkedHoursToolStripMenuItem";
-            this.WorkedHoursToolStripMenuItem.Size = new System.Drawing.Size(260, 30);
+            this.WorkedHoursToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
             this.WorkedHoursToolStripMenuItem.Text = "Добавление ОХЧ";
             this.WorkedHoursToolStripMenuItem.Click += new System.EventHandler(this.WorkedHoursToolStripMenuItem_Click);
             // 
             // PaymentToolStripMenuItem
             // 
             this.PaymentToolStripMenuItem.Name = "PaymentToolStripMenuItem";
-            this.PaymentToolStripMenuItem.Size = new System.Drawing.Size(260, 30);
+            this.PaymentToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
             this.PaymentToolStripMenuItem.Text = "Добавление оплаты";
             this.PaymentToolStripMenuItem.Click += new System.EventHandler(this.PaymentToolStripMenuItem_Click);
             // 
@@ -395,6 +397,13 @@
             this.labelLogin.TabIndex = 7;
             this.labelLogin.Text = "label1";
             // 
+            // AddThingsToolStripMenuItem
+            // 
+            this.AddThingsToolStripMenuItem.Name = "AddThingsToolStripMenuItem";
+            this.AddThingsToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
+            this.AddThingsToolStripMenuItem.Text = "Оформление вещей";
+            this.AddThingsToolStripMenuItem.Click += new System.EventHandler(this.AddThingsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -406,7 +415,7 @@
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-         //   this.Name = "MainForm";
+          //  this.Name = "MainForm";
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -459,5 +468,6 @@
         private System.Windows.Forms.ToolStripMenuItem ArrearsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem WorkedHoursArrearsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PaymentArrearsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddThingsToolStripMenuItem;
     }
 }

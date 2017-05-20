@@ -213,5 +213,11 @@ namespace HostelApplication
             InspectionForm inspectionForm = new InspectionForm(this.UserLogin);
             inspectionForm.Show();
         }
+
+        private void AddThingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddThingForm addThingRecordForm = new AddThingForm();
+            addThingRecordForm.Show();
+        }
     }
 }

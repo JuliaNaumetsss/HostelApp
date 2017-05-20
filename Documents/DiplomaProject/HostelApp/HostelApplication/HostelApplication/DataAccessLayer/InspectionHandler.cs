@@ -82,7 +82,7 @@ namespace HostelApplication.DataAccessLayer
             }
             finally
             {
-                isSuccess = false;
+               // isSuccess = false;
             }
             return isSuccess;
         }
