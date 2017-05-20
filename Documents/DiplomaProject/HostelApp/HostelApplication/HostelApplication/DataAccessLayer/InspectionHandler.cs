@@ -49,29 +49,31 @@ namespace HostelApplication.DataAccessLayer
         public bool AddInspection(Inspection inspection)
         {
             bool isSuccess = true;
-            DataBaseConnector connector = null;
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
 
                 // Add info to Estimation table
                 EstimationHandler estimationHandler = new EstimationHandler();
-                estimationHandler.AddEstimationInfo(inspection.Estimation);
-
-                // Get last estimation Id
-                int estimationId = estimationHandler.GetLastEstimationId();
-
-                // Add info to Inspection table
-                this.AddInfoToInspectionInfo(inspection.InspectionDate, inspection.Room, estimationId);
-
-                // Get last inspection Id
-                int inspectionId = this.GetLastInspectionId();
-
-                // Add info to Inspection_Employee table
-                foreach (string login in inspection.EmployeeLoginList)
+                isSuccess = estimationHandler.AddEstimationInfo(inspection.Estimation);
+                if (isSuccess)
                 {
-                    this.AddNoteToInspectionEmployeeTable(login, inspectionId);
+
+                    // Get last estimation Id
+                    int estimationId = estimationHandler.GetLastEstimationId();
+
+                    // Add info to Inspection table
+                    isSuccess = this.AddInfoToInspectionInfo(inspection.InspectionDate, inspection.Room, estimationId);
+                    if (isSuccess)
+                    {
+                        // Get last inspection Id
+                        int inspectionId = this.GetLastInspectionId();
+
+                        // Add info to Inspection_Employee table
+                        foreach (string login in inspection.EmployeeLoginList)
+                        {
+                            this.AddNoteToInspectionEmployeeTable(login, inspectionId);
+                        }
+                    }
                 }
             }
             catch(SqlException ex)
@@ -80,7 +82,6 @@ namespace HostelApplication.DataAccessLayer
             }
             finally
             {
-                connector?.CloseConnection();
                 isSuccess = false;
             }
             return isSuccess;
@@ -89,7 +90,7 @@ namespace HostelApplication.DataAccessLayer
         private bool AddInfoToInspectionInfo(string date, string room, int estimationId)
         {            
             string query = "INSERT INTO [Inspection] (inspectionDate, roomId, estimationId) " +
-                $"VALUES ('{date}', '{room}', '{estimationId}')";
+                $"VALUES ('{date}', '{room}', {estimationId})";
             return this.AddRecord(query);
         }
 

@@ -16,7 +16,7 @@ namespace HostelApplication.DataAccessLayer
             bool isSuccess = true;
             string query = "INSERT INTO [Estimation] (restroom, bathroom, hall, kitchen, roomA, roomB, averageRoomA, averageRoomB) " +
                 $"VALUES ('{estimation.Restroom}', '{estimation.Bathroom}', '{estimation.Hall}', '{estimation.Kitchen}', '{estimation.RoomA}', "+
-                $"'{estimation.RoomB}', '{estimation.AveragrRoomA}', '{estimation.AverageRoomB}')";
+                $"'{estimation.RoomB}', '{estimation.AverageRoomA}', '{estimation.AverageRoomB}')";
             DataBaseConnector connector = null;
             try
             {

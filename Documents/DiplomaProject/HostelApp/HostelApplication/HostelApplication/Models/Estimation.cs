@@ -20,7 +20,7 @@ namespace HostelApplication.Model
 
         public int RoomB { get; set; }
 
-        public double AveragrRoomA { get; set; }
+        public double AverageRoomA { get; set; }
 
         public double AverageRoomB { get; set; }
     }

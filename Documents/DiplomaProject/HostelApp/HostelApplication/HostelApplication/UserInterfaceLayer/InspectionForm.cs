@@ -14,6 +14,7 @@ namespace HostelApplication.UserInterfaceLayer
     public partial class InspectionForm : Form
     {
         string FirstEmployee = "";
+        List<Dictionary<string, string>> InspectorsListDictionary = new List<Dictionary<string, string>>();
 
         public InspectionForm(string firstEmployeeLogin)
         {
@@ -32,7 +33,8 @@ namespace HostelApplication.UserInterfaceLayer
             InspectionPage inspection = new InspectionPage();
             cmbFloor.DataSource = inspection.GetFloorList();
             tbFirstEmployee.Text = inspection.GetEmployeeSurnameName(this.FirstEmployee);
-            List<string> inspectors = inspection.GetInspectorList().Select(elem => elem["commonInfo"]).ToList();
+            this.InspectorsListDictionary = inspection.GetInspectorList();
+            List<string> inspectors = this.InspectorsListDictionary.Select(elem => elem["commonInfo"]).ToList();
             inspectors.Add("-");
             cmbSecondEmployee.DataSource = inspectors;
         }
@@ -70,10 +72,19 @@ namespace HostelApplication.UserInterfaceLayer
         {
             Dictionary<string, string> infoDict = new Dictionary<string, string>();
             infoDict["date"] = dateInspection.Value.ToString("dd/MM/yyy");
-            infoDict["floor"] = cmbFloor.Text;
             infoDict["room"] = cmbRoom.Text;
             infoDict["firstEmployee"] = this.FirstEmployee;
-            infoDict["secondEmploye"] = "";
+            if(cmbSecondEmployee.Text.Equals("-") || string.IsNullOrEmpty(cmbSecondEmployee.Text))
+            {
+                infoDict["secondEmploye"] = "";
+            }
+            else
+            {
+                string employeeLogin = "";
+                this.InspectorsListDictionary.FirstOrDefault(elem => elem["commonInfo"].Equals(cmbSecondEmployee.Text)).TryGetValue("login", out employeeLogin);
+                infoDict["secondEmploye"] = employeeLogin;
+            }
+            
             infoDict["restRoom"] = cmbRestRoom.Text;
             infoDict["bathroom"] = cmbBathroom.Text;
             infoDict["hall"] = cmbHall.Text;

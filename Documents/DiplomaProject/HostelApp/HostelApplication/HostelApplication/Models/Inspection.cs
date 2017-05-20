@@ -12,20 +12,7 @@ namespace HostelApplication.Model
 
         public string Room { get; set; }
 
-        private Estimation estimationRoom;
-
-        public Estimation Estimation
-        {
-            get
-            {
-                return estimationRoom;
-            }
-
-            set
-            {
-                value = estimationRoom;
-            }
-        }
+        public Estimation Estimation { get; set; }
 
         public List<string> EmployeeLoginList { get; set; }
     }
