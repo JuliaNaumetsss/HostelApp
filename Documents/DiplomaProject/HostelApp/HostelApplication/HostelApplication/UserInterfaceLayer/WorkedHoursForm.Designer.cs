@@ -210,6 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 538);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPaymentSum);
             this.Controls.Add(this.tbEmployee);
@@ -229,6 +230,7 @@
             this.Controls.Add(this.cmbFloor);
             this.Controls.Add(this.dateInspection);
             this.Name = "WorkedHoursForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WorkedHoursForm";
             this.ResumeLayout(false);
             this.PerformLayout();

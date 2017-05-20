@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HostelApplication.BusinessLayer;
+using HostelApplication.ReportGenerator;
 
 namespace HostelApplication.UserInterfaceLayer
 {
@@ -190,6 +191,7 @@ namespace HostelApplication.UserInterfaceLayer
 
         private void InitializeWorkedHoursComponents()
         {
+            this.Text = "Задолженности по ОХЧ";
             lbNormSum.Visible = false;
             lbNormHours.Visible = true;
             lbExpectedSum.Visible = false;
@@ -204,6 +206,7 @@ namespace HostelApplication.UserInterfaceLayer
 
         private void InitializePaymentComponents()
         {
+            this.Text = "Задолженности по оплате";
             lbNormSum.Visible = true;
             lbNormHours.Visible = false;
             lbExpectedSum.Visible = true;
@@ -214,6 +217,31 @@ namespace HostelApplication.UserInterfaceLayer
             tbHoursCount.Visible = false;
             dataGridViewDebtors.Columns[3].HeaderText = "Оплаченная сумма";
             dataGridViewDebtors.Columns[4].HeaderText = "Необходимое сумма";
+        }
+
+        private void buttonOpenFile_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewDebtors.Rows.Count > 1)
+            {
+                if(string.IsNullOrEmpty(cmbFileFormat.Text))
+                {
+                    MessageBox.Show("Выберите формат файла");
+                }
+                else
+                {
+                    switch(cmbFileFormat.Text)
+                    {
+                        case "MS Word":
+                            WordFileCreator wordCreator = new WordFileCreator();
+                            wordCreator.ExportToWord(dataGridViewDebtors);
+                            break;
+                        case "MS Excel":
+                            ExcelFileCreator excelCreator = new ExcelFileCreator();
+                            excelCreator.ExportToExcel(dataGridViewDebtors);
+                            break;
+                    }
+                }
+            }
         }
     }
 }

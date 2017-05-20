@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gridEmployee = new System.Windows.Forms.DataGridView();
-            this.gridStudent = new System.Windows.Forms.DataGridView();
             this.SurnameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PatronymicEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +36,7 @@
             this.RoomEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoginEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridStudent = new System.Windows.Forms.DataGridView();
             this.SurnameStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PatronymicStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,27 +67,6 @@
             this.gridEmployee.Size = new System.Drawing.Size(1198, 474);
             this.gridEmployee.TabIndex = 0;
             this.gridEmployee.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridEmployee_MouseDoubleClick);
-            // 
-            // gridStudent
-            // 
-            this.gridStudent.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.gridStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SurnameStudent,
-            this.NameStudent,
-            this.PatronymicStudent,
-            this.FloorStudent,
-            this.RoomStudent,
-            this.PhoneStudent,
-            this.LoginStudent});
-            this.gridStudent.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gridStudent.Location = new System.Drawing.Point(-1, 0);
-            this.gridStudent.Name = "gridStudent";
-            this.gridStudent.ReadOnly = true;
-            this.gridStudent.RowTemplate.Height = 28;
-            this.gridStudent.Size = new System.Drawing.Size(1198, 474);
-            this.gridStudent.TabIndex = 1;
-            this.gridStudent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridStudent_MouseDoubleClick);
             // 
             // SurnameEmployee
             // 
@@ -136,6 +115,27 @@
             this.LoginEmployee.HeaderText = "Login";
             this.LoginEmployee.Name = "LoginEmployee";
             this.LoginEmployee.ReadOnly = true;
+            // 
+            // gridStudent
+            // 
+            this.gridStudent.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gridStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SurnameStudent,
+            this.NameStudent,
+            this.PatronymicStudent,
+            this.FloorStudent,
+            this.RoomStudent,
+            this.PhoneStudent,
+            this.LoginStudent});
+            this.gridStudent.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.gridStudent.Location = new System.Drawing.Point(-1, 0);
+            this.gridStudent.Name = "gridStudent";
+            this.gridStudent.ReadOnly = true;
+            this.gridStudent.RowTemplate.Height = 28;
+            this.gridStudent.Size = new System.Drawing.Size(1198, 474);
+            this.gridStudent.TabIndex = 1;
+            this.gridStudent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridStudent_MouseDoubleClick);
             // 
             // SurnameStudent
             // 
@@ -193,6 +193,7 @@
             this.Controls.Add(this.gridStudent);
             this.Controls.Add(this.gridEmployee);
             this.Name = "UserRemoveForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserRemoveForm";
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStudent)).EndInit();

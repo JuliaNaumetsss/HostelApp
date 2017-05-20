@@ -53,6 +53,7 @@
             this.InspectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WorkedHoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddThingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +69,8 @@
             this.RoomNumberEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelLogin = new System.Windows.Forms.Label();
-            this.AddThingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
+            this.cmbFileFormat = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
@@ -94,7 +96,7 @@
             this.OtherToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(917, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(907, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -279,6 +281,13 @@
             this.PaymentToolStripMenuItem.Text = "Добавление оплаты";
             this.PaymentToolStripMenuItem.Click += new System.EventHandler(this.PaymentToolStripMenuItem_Click);
             // 
+            // AddThingsToolStripMenuItem
+            // 
+            this.AddThingsToolStripMenuItem.Name = "AddThingsToolStripMenuItem";
+            this.AddThingsToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
+            this.AddThingsToolStripMenuItem.Text = "Оформление вещей";
+            this.AddThingsToolStripMenuItem.Click += new System.EventHandler(this.AddThingsToolStripMenuItem_Click);
+            // 
             // dataGridViewStudents
             // 
             this.dataGridViewStudents.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -397,25 +406,44 @@
             this.labelLogin.TabIndex = 7;
             this.labelLogin.Text = "label1";
             // 
-            // AddThingsToolStripMenuItem
+            // buttonOpenFile
             // 
-            this.AddThingsToolStripMenuItem.Name = "AddThingsToolStripMenuItem";
-            this.AddThingsToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
-            this.AddThingsToolStripMenuItem.Text = "Оформление вещей";
-            this.AddThingsToolStripMenuItem.Click += new System.EventHandler(this.AddThingsToolStripMenuItem_Click);
+            this.buttonOpenFile.Location = new System.Drawing.Point(401, 431);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(168, 28);
+            this.buttonOpenFile.TabIndex = 8;
+            this.buttonOpenFile.Text = "Открыть файл";
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
+            // cmbFileFormat
+            // 
+            this.cmbFileFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFileFormat.FormattingEnabled = true;
+            this.cmbFileFormat.Items.AddRange(new object[] {
+            "MS Word",
+            "MS Excel"});
+            this.cmbFileFormat.Location = new System.Drawing.Point(586, 431);
+            this.cmbFileFormat.Name = "cmbFileFormat";
+            this.cmbFileFormat.Size = new System.Drawing.Size(186, 28);
+            this.cmbFileFormat.TabIndex = 9;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 475);
+            this.ClientSize = new System.Drawing.Size(907, 475);
+            this.ControlBox = false;
+            this.Controls.Add(this.cmbFileFormat);
+            this.Controls.Add(this.buttonOpenFile);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.dataGridViewEmployees);
             this.Controls.Add(this.dataGridViewStudents);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-          //  this.Name = "MainForm";
+           // this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -469,5 +497,7 @@
         private System.Windows.Forms.ToolStripMenuItem WorkedHoursArrearsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PaymentArrearsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddThingsToolStripMenuItem;
+        private System.Windows.Forms.Button buttonOpenFile;
+        private System.Windows.Forms.ComboBox cmbFileFormat;
     }
 }

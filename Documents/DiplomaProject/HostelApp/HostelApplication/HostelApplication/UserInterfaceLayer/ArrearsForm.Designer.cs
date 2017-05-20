@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbExpectedHours = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
+            this.cmbFileFormat = new System.Windows.Forms.ComboBox();
             this.lbExpectedSum = new System.Windows.Forms.Label();
             this.lbNormSum = new System.Windows.Forms.Label();
             this.tbExpectedSum = new System.Windows.Forms.TextBox();
@@ -136,7 +138,7 @@
             // 
             this.buttonShowDebtors.Location = new System.Drawing.Point(21, 283);
             this.buttonShowDebtors.Name = "buttonShowDebtors";
-            this.buttonShowDebtors.Size = new System.Drawing.Size(288, 63);
+            this.buttonShowDebtors.Size = new System.Drawing.Size(301, 63);
             this.buttonShowDebtors.TabIndex = 5;
             this.buttonShowDebtors.Text = "Показать должников";
             this.buttonShowDebtors.UseVisualStyleBackColor = true;
@@ -171,6 +173,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonOpenFile);
+            this.panel1.Controls.Add(this.cmbFileFormat);
             this.panel1.Controls.Add(this.lbExpectedSum);
             this.panel1.Controls.Add(this.lbNormSum);
             this.panel1.Controls.Add(this.tbExpectedSum);
@@ -186,8 +190,30 @@
             this.panel1.Controls.Add(this.tbHoursCount);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 367);
+            this.panel1.Size = new System.Drawing.Size(341, 443);
             this.panel1.TabIndex = 9;
+            // 
+            // buttonOpenFile
+            // 
+            this.buttonOpenFile.Location = new System.Drawing.Point(188, 379);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(134, 45);
+            this.buttonOpenFile.TabIndex = 14;
+            this.buttonOpenFile.Text = "Открыть файл";
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
+            // cmbFileFormat
+            // 
+            this.cmbFileFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFileFormat.FormattingEnabled = true;
+            this.cmbFileFormat.Items.AddRange(new object[] {
+            "MS Word",
+            "MS Excel"});
+            this.cmbFileFormat.Location = new System.Drawing.Point(21, 388);
+            this.cmbFileFormat.Name = "cmbFileFormat";
+            this.cmbFileFormat.Size = new System.Drawing.Size(161, 28);
+            this.cmbFileFormat.TabIndex = 13;
             // 
             // lbExpectedSum
             // 
@@ -234,7 +260,7 @@
             this.dataGridViewDebtors.Location = new System.Drawing.Point(396, 13);
             this.dataGridViewDebtors.Name = "dataGridViewDebtors";
             this.dataGridViewDebtors.RowTemplate.Height = 28;
-            this.dataGridViewDebtors.Size = new System.Drawing.Size(947, 366);
+            this.dataGridViewDebtors.Size = new System.Drawing.Size(947, 442);
             this.dataGridViewDebtors.TabIndex = 10;
             // 
             // Surname
@@ -271,10 +297,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 391);
+            this.ClientSize = new System.Drawing.Size(1357, 491);
             this.Controls.Add(this.dataGridViewDebtors);
             this.Controls.Add(this.panel1);
-            //this.Name = "ArrearsForm";
+           // this.Name = "ArrearsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arrears";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -305,5 +332,7 @@
         private System.Windows.Forms.Label lbExpectedSum;
         private System.Windows.Forms.Label lbNormSum;
         private System.Windows.Forms.TextBox tbExpectedSum;
+        private System.Windows.Forms.ComboBox cmbFileFormat;
+        private System.Windows.Forms.Button buttonOpenFile;
     }
 }

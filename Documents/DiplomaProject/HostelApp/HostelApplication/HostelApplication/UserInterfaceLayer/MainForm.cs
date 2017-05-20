@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using HostelApplication.Enum;
 using HostelApplication.Handler;
 using HostelApplication.Page;
+using HostelApplication.ReportGenerator;
 using HostelApplication.UserInterfaceLayer;
+
 
 namespace HostelApplication
 {
@@ -218,6 +220,36 @@ namespace HostelApplication
         {
             AddThingForm addThingRecordForm = new AddThingForm();
             addThingRecordForm.Show();
+        }
+
+        private void buttonOpenFile_Click(object sender, EventArgs e)
+        {
+            DataGridView grid = null;
+            if (dataGridViewEmployees.Visible)
+                grid = dataGridViewEmployees;
+            if (dataGridViewStudents.Visible)
+                grid = dataGridViewStudents;
+            if (grid != null && grid.Rows.Count > 1)
+            {
+                if (string.IsNullOrEmpty(cmbFileFormat.Text))
+                {
+                    MessageBox.Show("Выберите формат файла.");
+                }
+                else
+                {
+                    switch (cmbFileFormat.Text)
+                    {
+                        case "MS Word":
+                            WordFileCreator word = new WordFileCreator();
+                            word.ExportToWord(grid);
+                            break;
+                        case "MS Excel":
+                            ExcelFileCreator excelCreator = new ExcelFileCreator();
+                            excelCreator.ExportToExcel(grid);
+                            break;
+                    }
+                }
+            }
         }
     }
 }

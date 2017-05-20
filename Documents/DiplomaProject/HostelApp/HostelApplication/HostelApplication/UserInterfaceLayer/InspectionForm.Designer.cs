@@ -360,11 +360,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonAddInspection);
             this.Controls.Add(this.panel1);
             this.Name = "InspectionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Проверка блока";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

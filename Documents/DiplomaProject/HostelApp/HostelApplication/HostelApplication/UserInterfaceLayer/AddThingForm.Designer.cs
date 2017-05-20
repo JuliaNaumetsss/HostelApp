@@ -34,19 +34,19 @@
             this.cmbRoom = new System.Windows.Forms.ComboBox();
             this.cmbStudent = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbThing = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbThingCount = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonAddThing = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonAddRecord = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ThingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAddThing = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbThingCount = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbThing = new System.Windows.Forms.ComboBox();
+            this.buttonAddRecord = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -109,53 +109,6 @@
             this.panel1.Size = new System.Drawing.Size(774, 372);
             this.panel1.TabIndex = 5;
             // 
-            // cmbThing
-            // 
-            this.cmbThing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbThing.FormattingEnabled = true;
-            this.cmbThing.Location = new System.Drawing.Point(186, 17);
-            this.cmbThing.Name = "cmbThing";
-            this.cmbThing.Size = new System.Drawing.Size(179, 28);
-            this.cmbThing.TabIndex = 0;
-            this.cmbThing.SelectedIndexChanged += new System.EventHandler(this.cmbThing_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Наименование вещи";
-            // 
-            // cmbThingCount
-            // 
-            this.cmbThingCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbThingCount.FormattingEnabled = true;
-            this.cmbThingCount.Location = new System.Drawing.Point(186, 79);
-            this.cmbThingCount.Name = "cmbThingCount";
-            this.cmbThingCount.Size = new System.Drawing.Size(179, 28);
-            this.cmbThingCount.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Количество вещей";
-            // 
-            // buttonAddThing
-            // 
-            this.buttonAddThing.Location = new System.Drawing.Point(123, 147);
-            this.buttonAddThing.Name = "buttonAddThing";
-            this.buttonAddThing.Size = new System.Drawing.Size(144, 39);
-            this.buttonAddThing.TabIndex = 4;
-            this.buttonAddThing.Text = "Добавить";
-            this.buttonAddThing.UseVisualStyleBackColor = true;
-            this.buttonAddThing.Click += new System.EventHandler(this.buttonAddThing_Click);
-            // 
             // dataGridView
             // 
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -170,6 +123,67 @@
             this.dataGridView.Size = new System.Drawing.Size(354, 340);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView_UserDeletingRow);
+            // 
+            // ThingName
+            // 
+            this.ThingName.HeaderText = "Название вещи";
+            this.ThingName.Name = "ThingName";
+            this.ThingName.ReadOnly = true;
+            this.ThingName.Width = 200;
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "Количество";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            this.Count.Width = 110;
+            // 
+            // buttonAddThing
+            // 
+            this.buttonAddThing.Location = new System.Drawing.Point(123, 147);
+            this.buttonAddThing.Name = "buttonAddThing";
+            this.buttonAddThing.Size = new System.Drawing.Size(144, 39);
+            this.buttonAddThing.TabIndex = 4;
+            this.buttonAddThing.Text = "Добавить";
+            this.buttonAddThing.UseVisualStyleBackColor = true;
+            this.buttonAddThing.Click += new System.EventHandler(this.buttonAddThing_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Количество вещей";
+            // 
+            // cmbThingCount
+            // 
+            this.cmbThingCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThingCount.FormattingEnabled = true;
+            this.cmbThingCount.Location = new System.Drawing.Point(186, 79);
+            this.cmbThingCount.Name = "cmbThingCount";
+            this.cmbThingCount.Size = new System.Drawing.Size(179, 28);
+            this.cmbThingCount.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Наименование вещи";
+            // 
+            // cmbThing
+            // 
+            this.cmbThing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThing.FormattingEnabled = true;
+            this.cmbThing.Location = new System.Drawing.Point(186, 17);
+            this.cmbThing.Name = "cmbThing";
+            this.cmbThing.Size = new System.Drawing.Size(179, 28);
+            this.cmbThing.TabIndex = 0;
+            this.cmbThing.SelectedIndexChanged += new System.EventHandler(this.cmbThing_SelectedIndexChanged);
             // 
             // buttonAddRecord
             // 
@@ -197,14 +211,14 @@
             this.panel2.Size = new System.Drawing.Size(400, 372);
             this.panel2.TabIndex = 7;
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Этаж";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 218);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Студент";
             // 
             // label5
             // 
@@ -215,28 +229,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Комната";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Студент";
-            // 
-            // ThingName
-            // 
-            this.ThingName.HeaderText = "Название вещи";
-            this.ThingName.Name = "ThingName";
-            this.ThingName.ReadOnly = true;
-            this.ThingName.Width = 200;
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Количество";
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
-            this.Count.Width = 110;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Этаж";
             // 
             // buttonExit
             // 
@@ -254,11 +254,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1283, 471);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonAddRecord);
             this.Controls.Add(this.panel1);
             this.Name = "AddThingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление записи о взятых вещах";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

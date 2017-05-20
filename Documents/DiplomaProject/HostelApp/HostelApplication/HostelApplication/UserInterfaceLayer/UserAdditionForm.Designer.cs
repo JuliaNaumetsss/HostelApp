@@ -59,6 +59,8 @@
             this.panelCommonInfo = new System.Windows.Forms.Panel();
             this.panelEmployeeInfo = new System.Windows.Forms.Panel();
             this.panelStudentInfo = new System.Windows.Forms.Panel();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.buttonChooseImage = new System.Windows.Forms.Button();
             this.cmbRoomStudent = new System.Windows.Forms.ComboBox();
             this.cmbFloorStudent = new System.Windows.Forms.ComboBox();
             this.lbFloor2 = new System.Windows.Forms.Label();
@@ -68,8 +70,6 @@
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.lbGroup = new System.Windows.Forms.Label();
             this.tbGruop = new System.Windows.Forms.TextBox();
-            this.buttonChooseImage = new System.Windows.Forms.Button();
-            this.labelFilePath = new System.Windows.Forms.Label();
             this.panelCommonInfo.SuspendLayout();
             this.panelEmployeeInfo.SuspendLayout();
             this.panelStudentInfo.SuspendLayout();
@@ -376,6 +376,26 @@
             this.panelStudentInfo.Size = new System.Drawing.Size(402, 379);
             this.panelStudentInfo.TabIndex = 31;
             // 
+            // labelFilePath
+            // 
+            this.labelFilePath.AutoSize = true;
+            this.labelFilePath.Location = new System.Drawing.Point(48, 275);
+            this.labelFilePath.Name = "labelFilePath";
+            this.labelFilePath.Size = new System.Drawing.Size(51, 20);
+            this.labelFilePath.TabIndex = 31;
+            this.labelFilePath.Text = "label1";
+            this.labelFilePath.Visible = false;
+            // 
+            // buttonChooseImage
+            // 
+            this.buttonChooseImage.Location = new System.Drawing.Point(153, 237);
+            this.buttonChooseImage.Name = "buttonChooseImage";
+            this.buttonChooseImage.Size = new System.Drawing.Size(197, 34);
+            this.buttonChooseImage.TabIndex = 30;
+            this.buttonChooseImage.Text = "Выбрать фотографию";
+            this.buttonChooseImage.UseVisualStyleBackColor = true;
+            this.buttonChooseImage.Click += new System.EventHandler(this.buttonChooseImage_Click);
+            // 
             // cmbRoomStudent
             // 
             this.cmbRoomStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -463,37 +483,19 @@
             this.tbGruop.Size = new System.Drawing.Size(197, 26);
             this.tbGruop.TabIndex = 0;
             // 
-            // buttonChooseImage
-            // 
-            this.buttonChooseImage.Location = new System.Drawing.Point(153, 237);
-            this.buttonChooseImage.Name = "buttonChooseImage";
-            this.buttonChooseImage.Size = new System.Drawing.Size(197, 34);
-            this.buttonChooseImage.TabIndex = 30;
-            this.buttonChooseImage.Text = "Выбрать фотографию";
-            this.buttonChooseImage.UseVisualStyleBackColor = true;
-            this.buttonChooseImage.Click += new System.EventHandler(this.buttonChooseImage_Click);
-            // 
-            // labelFilePath
-            // 
-            this.labelFilePath.AutoSize = true;
-            this.labelFilePath.Location = new System.Drawing.Point(48, 275);
-            this.labelFilePath.Name = "labelFilePath";
-            this.labelFilePath.Size = new System.Drawing.Size(51, 20);
-            this.labelFilePath.TabIndex = 31;
-            this.labelFilePath.Text = "label1";
-            this.labelFilePath.Visible = false;
-            // 
             // UserAdditionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 528);
+            this.ControlBox = false;
             this.Controls.Add(this.panelStudentInfo);
             this.Controls.Add(this.panelEmployeeInfo);
             this.Controls.Add(this.panelCommonInfo);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonAdd);
             this.Name = "UserAdditionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelCommonInfo.ResumeLayout(false);
             this.panelCommonInfo.PerformLayout();
             this.panelEmployeeInfo.ResumeLayout(false);

@@ -80,6 +80,7 @@ namespace HostelApplication
 
         private Dictionary<string, string> DisplayEmployeeInformation(string login)
         {
+            this.Width = infoTextBox.Width + 10;
             this.Text = "Информация о сотруднике";
             UsersInformationPage infoPage = new UsersInformationPage();
             Dictionary<string, string> employeeInfoDictionary = infoPage.GetEmployeeInfoByLogin(login);

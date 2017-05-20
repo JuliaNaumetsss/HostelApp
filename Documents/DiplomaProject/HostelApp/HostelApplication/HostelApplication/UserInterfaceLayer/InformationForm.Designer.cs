@@ -59,6 +59,7 @@
             this.Controls.Add(this.pictureBoxPhoto);
             this.Controls.Add(this.infoTextBox);
             this.Name = "InformationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformationForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
