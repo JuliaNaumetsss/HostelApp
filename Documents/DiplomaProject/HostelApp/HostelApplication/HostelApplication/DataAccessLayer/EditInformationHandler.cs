@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
+using HostelApplication.DataAccessLayer;
 using HostelApplication.Model;
 
 namespace HostelApplication.Handler
@@ -12,7 +8,7 @@ namespace HostelApplication.Handler
     {
         public bool EditStudent(Student student)
         {
-            DataBaseConnector connector = null;
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -23,20 +19,13 @@ namespace HostelApplication.Handler
                 // Get new value of room
                 string newRoomNumber = student.Room.IdRoom;
                 
-                int idPersonalInfo = userHandler.GetPersonalInfoIdByLogin(student.Login);
-
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
+                int idPersonalInfo = userHandler.GetPersonalInfoIdByLogin(student.Login);               
 
                 // Update Personal Info
-                cmd.CommandText = this.FormQueryForUpdatePersonalInfoTable<Student>(student, idPersonalInfo);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForUpdatePersonalInfoTable<Student>(student, idPersonalInfo));
 
                 // Update Student Table
-                cmd.CommandText = this.FormQueryForUpdateStudentTable(student);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForUpdateStudentTable(student));
 
                 // Update count of empty room
                 if (!oldRoomNumber.Trim().Equals(newRoomNumber.Trim()))
@@ -51,16 +40,12 @@ namespace HostelApplication.Handler
                 string message = ex.Message.ToString();
                 isSuccess = false;
             }
-            finally
-            {
-                connector?.CloseConnection();
-            }
             return isSuccess;
         }
 
         public bool EditEmployee(Employee employee)
         {
-            DataBaseConnector connector = null;
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -73,22 +58,14 @@ namespace HostelApplication.Handler
 
                 int idPersonalInfo = userHandler.GetPersonalInfoIdByLogin(employee.Login);
 
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
                 // Update Personal Info
-                cmd.CommandText = this.FormQueryForUpdatePersonalInfoTable<Employee>(employee, idPersonalInfo);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForUpdatePersonalInfoTable<Employee>(employee, idPersonalInfo));
 
                 // Update User Table
-                cmd.CommandText = this.FormQueryForUpdateUserTable(employee.UserTypeInt, employee.Login);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForUpdateUserTable(employee.UserTypeInt, employee.Login));
 
                 // Update Employee Table
-                cmd.CommandText = this.FormQueryForUpdateEmployeeTable(employee);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForUpdateEmployeeTable(employee));
 
                 // Update count of empty room
                 if (!oldRoomNumber.Trim().Equals(newRoomNumber.Trim()))
@@ -102,10 +79,6 @@ namespace HostelApplication.Handler
             {
                 string message = ex.Message.ToString();
                 isSuccess = false;
-            }
-            finally
-            {
-
             }
             return isSuccess;
         }

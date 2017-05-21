@@ -62,6 +62,7 @@
     <Compile Include="BusinessLayer\PaymentPage.cs" />
     <Compile Include="BusinessLayer\ThingPage.cs" />
     <Compile Include="BusinessLayer\WorkedHoursPage.cs" />
+    <Compile Include="DataAccessLayer\AddEtitDataInDataBase.cs" />
     <Compile Include="DataAccessLayer\EstimationHandler.cs" />
     <Compile Include="DataAccessLayer\InspectionHandler.cs" />
     <Compile Include="DataAccessLayer\PaymentHandler.cs" />

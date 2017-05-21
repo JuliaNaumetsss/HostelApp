@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HostelApplication.Model;
 using System.Data.SqlClient;
 using System.Data;
@@ -13,30 +9,16 @@ namespace HostelApplication.DataAccessLayer
     {
         public bool AddEstimationInfo(Estimation estimation)
         {
-            bool isSuccess = true;
-            string query = "INSERT INTO [Estimation] (restroom, bathroom, hall, kitchen, roomA, roomB, averageRoomA, averageRoomB) " +
-                $"VALUES ('{estimation.Restroom}', '{estimation.Bathroom}', '{estimation.Hall}', '{estimation.Kitchen}', '{estimation.RoomA}', "+
-                $"'{estimation.RoomB}', '{estimation.AverageRoomA}', '{estimation.AverageRoomB}')";
-            DataBaseConnector connector = null;
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            bool isSuccess = true;            
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
-                // Insert into personal info
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormAddEstimationQuery(estimation));
             }
             catch(SqlException ex)
             {
                 isSuccess = false;
                 Console.WriteLine(ex.Message.ToString());
-            }
-            finally
-            {
-                connector?.CloseConnection();
             }
             return isSuccess;
         }
@@ -64,6 +46,14 @@ namespace HostelApplication.DataAccessLayer
                 connector?.CloseConnection();
             }
             return index;
+        }
+
+        private string FormAddEstimationQuery(Estimation estimation)
+        {
+            string query = "INSERT INTO [Estimation] (restroom, bathroom, hall, kitchen, roomA, roomB, averageRoomA, averageRoomB) " +
+                $"VALUES ('{estimation.Restroom}', '{estimation.Bathroom}', '{estimation.Hall}', '{estimation.Kitchen}', '{estimation.RoomA}', " +
+                $"'{estimation.RoomB}', '{estimation.AverageRoomA}', '{estimation.AverageRoomB}')";
+            return query;
         }
     }
 }

@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HostelApplication.Model;
-using HostelApplication.Enum;
+using HostelApplication.DataAccessLayer;
 
 namespace HostelApplication.Handler
 {
@@ -112,27 +109,17 @@ namespace HostelApplication.Handler
 
         private void UpdateRoomCount(string roomId, int emptyPlaceCount)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             Room room = this.GetRoomById(roomId);
             string query = $"UPDATE [Room] SET [Room].emptyPlaceCount = {emptyPlaceCount} WHERE [Room].idRoom='{roomId.Trim()}'";
-            DataBaseConnector connector = null;
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(query);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            finally
-            {
-                connector?.CloseConnection();
-            }
         }
-
     }
 }

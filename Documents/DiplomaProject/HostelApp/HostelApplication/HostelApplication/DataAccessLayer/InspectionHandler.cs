@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using HostelApplication.Model;
@@ -26,16 +24,16 @@ namespace HostelApplication.DataAccessLayer
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connector.Connection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds, "Inspectors");
-                foreach(DataRow row in ds.Tables["Inspectors"].Rows)
+                foreach (DataRow row in ds.Tables["Inspectors"].Rows)
                 {
                     Dictionary<string, string> infoDict = new Dictionary<string, string>();
                     infoDict["login"] = row["login"].ToString();
                     infoDict["commonInfo"] = row["surname"] + " " + row["name"] + " " + row["patronymic"];
                     resultList.Add(infoDict);
                 }
-                
+
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message.ToList());
             }
@@ -48,6 +46,7 @@ namespace HostelApplication.DataAccessLayer
 
         public bool AddInspection(Inspection inspection)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -76,19 +75,15 @@ namespace HostelApplication.DataAccessLayer
                     }
                 }
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-            }
-            finally
-            {
-               // isSuccess = false;
             }
             return isSuccess;
         }
 
         private bool AddInfoToInspectionInfo(string date, string room, int estimationId)
-        {            
+        {
             string query = "INSERT INTO [Inspection] (inspectionDate, roomId, estimationId) " +
                 $"VALUES ('{date}', '{room}', {estimationId})";
             return this.AddRecord(query);
@@ -129,29 +124,17 @@ namespace HostelApplication.DataAccessLayer
         private bool AddRecord(string query)
         {
             bool isSuccess = true;
-            DataBaseConnector connector = null;
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
-                // Insert into personal info
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(query);
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                isSuccess = false;
                 Console.WriteLine(ex.Message.ToString());
-            }
-            finally
-            {
-                connector?.CloseConnection();
+                isSuccess = false;
             }
             return isSuccess;
         }
     }
-    
 }

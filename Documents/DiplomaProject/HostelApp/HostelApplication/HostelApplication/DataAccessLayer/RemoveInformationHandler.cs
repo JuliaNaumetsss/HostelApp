@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HostelApplication.Enum;
+﻿using HostelApplication.DataAccessLayer;
 using HostelApplication.Model;
 
 namespace HostelApplication.Handler
@@ -13,8 +7,8 @@ namespace HostelApplication.Handler
     {
         public bool RemoveEmployee(string login)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
-            DataBaseConnector connector = new DataBaseConnector();
             try
             {
                 // Get Personal Info id for current employee
@@ -24,22 +18,14 @@ namespace HostelApplication.Handler
                 {
                     Employee employee = handler.GetEmployeeByLogin(login);
 
-                    connector = new DataBaseConnector();
-                    connector.OpenConnection();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = connector.Connection;
-
                     // Remove information from Employee table
-                    cmd.CommandText = this.FormQueryForDeleteFromEmployeeTable(login);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromEmployeeTable(login));
 
                     // Remove information from User table
-                    cmd.CommandText = this.FormQueryForDeleteFromUserTable(login);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromUserTable(login));
 
                     // Remove information from PersonalInfo table
-                    cmd.CommandText = this.FormQueryForDeleteFromPersonalInfoTable(idPersonalInfo);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromPersonalInfoTable(idPersonalInfo));
 
                     // Update Room Table
                     RoomHandler roomHandler = new RoomHandler();
@@ -54,17 +40,13 @@ namespace HostelApplication.Handler
             {
                 isSuccess = false;
             }
-            finally
-            {
-                connector?.CloseConnection();
-            }
             return isSuccess;
         }
 
         public bool RemoveStudent(string login)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;            
-            DataBaseConnector connector = new DataBaseConnector();
             try
             {
                 // Get Personal Info id for current student
@@ -74,22 +56,14 @@ namespace HostelApplication.Handler
                 {
                     Student student = handler.GetStudentByLogin(login);
 
-                    connector = new DataBaseConnector();
-                    connector.OpenConnection();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = connector.Connection;
-
                     // Remove information from Student table
-                    cmd.CommandText = this.FormQueryForDeleteFromStudentTable(login);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromStudentTable(login));
 
                     // Remove information from User table
-                    cmd.CommandText = this.FormQueryForDeleteFromUserTable(login);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromUserTable(login));
 
                     // Remove information from PersonalInfo table
-                    cmd.CommandText = this.FormQueryForDeleteFromPersonalInfoTable(idPersonalInfo);
-                    cmd.ExecuteNonQuery();
+                    hdl.PerformRequest(this.FormQueryForDeleteFromPersonalInfoTable(idPersonalInfo));
 
                     // Update Room Table
                     RoomHandler roomHandler = new RoomHandler();
@@ -103,10 +77,6 @@ namespace HostelApplication.Handler
             catch
             {
                 isSuccess = false;
-            }
-            finally
-            {
-                connector?.CloseConnection();
             }
             return isSuccess;
         }

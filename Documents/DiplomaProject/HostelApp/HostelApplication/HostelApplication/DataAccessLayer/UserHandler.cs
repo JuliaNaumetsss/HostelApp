@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HostelApplication.Model;
-using System.Numerics;
 using HostelApplication.Enum;
+using HostelApplication.DataAccessLayer;
 
 namespace HostelApplication.Handler
 {
@@ -15,26 +12,17 @@ namespace HostelApplication.Handler
     {
         public bool UpdateUserPassword(string login, string newPassword)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             string query = $"UPDATE [User] SET password='{newPassword}' WHERE login='{login}'";
-            DataBaseConnector connector = null;
             bool isUpdated = true;
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(query);
             }
             catch(SqlException ex)
             {
+                Console.WriteLine(ex.Message.ToString());
                 isUpdated = false;
-            }
-            finally
-            {
-                connector?.CloseConnection();
             }
             return isUpdated;
         }

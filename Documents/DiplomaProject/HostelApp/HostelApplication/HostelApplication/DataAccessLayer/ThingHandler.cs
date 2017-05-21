@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using HostelApplication.Model;
@@ -95,27 +92,17 @@ namespace HostelApplication.DataAccessLayer
 
         private bool WorkWithRecords(string query)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
-            DataBaseConnector connector = null;
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
                 // Insert into personal info
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(query);
             }
             catch (SqlException ex)
             {
                 isSuccess = false;
                 Console.WriteLine(ex.Message.ToString());
-            }
-            finally
-            {
-                connector?.CloseConnection();
             }
             return isSuccess;
         }

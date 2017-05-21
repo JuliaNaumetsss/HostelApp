@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HostelApplication.Model;
+using HostelApplication.DataAccessLayer;
 
 namespace HostelApplication.Handler
 {
@@ -12,42 +9,30 @@ namespace HostelApplication.Handler
     {
         public bool AddEmployee(Employee employee)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSuccess = true;
-            string resultMessage = "";
-            DataBaseConnector connector = null;
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
                 // Insert into personal info
-                cmd.CommandText = this.FormQueryForAddingPersonalIno<Employee>(employee);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForAddingPersonalIno<Employee>(employee));
 
                 // Get index
                 PersonalInfoHandler personalInfoHadler = new PersonalInfoHandler();
 
                 // Add information to table User
-                cmd.CommandText = this.FormQueryForAddingUserEmployee(employee, personalInfoHadler.GetLatPersonalInfoIndex());
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForAddingUserEmployee(employee, personalInfoHadler.GetLatPersonalInfoIndex()));
 
                 //Add information to Employee table
-                cmd.CommandText = this.FormQueryForAdingEmployee(employee);
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(this.FormQueryForAdingEmployee(employee));
 
                 // Decrease room count
                 RoomHandler roomHandler = new RoomHandler();
                 roomHandler.UpdateEmptyRoomCountAfterAddingUser(employee.Room.IdRoom);
             }
             catch(SqlException ex)
-            {               
-                isSuccess = false;              
-            }
-            finally
             {
-                connector?.CloseConnection();
+                Console.WriteLine(ex.Message.ToString());      
+                isSuccess = false;              
             }
             return isSuccess;
         }

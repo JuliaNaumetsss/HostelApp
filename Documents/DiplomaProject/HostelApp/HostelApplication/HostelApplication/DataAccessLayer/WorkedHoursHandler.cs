@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HostelApplication.Model;
 
 namespace HostelApplication.DataAccessLayer
@@ -13,38 +10,27 @@ namespace HostelApplication.DataAccessLayer
     {
         public bool AddWorkedHoursInformation(WorkedHours info)
         {
+            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
             bool isSucces = true;
 
             int count = this.GetWorkedHoursForStudentByLogin(info.StudentId) + info.HoursCount;
 
             string query = "INSERT INTO [WorkedHours] (workedDate, hoursCount, studentId, employeeId, description) " +
                 $"VALUES ('{info.WorkedDate}', '{info.HoursCount}', '{info.StudentId}', '{info.EmployeeId}', '{info.Description}')";
-
             string updateStudentQuery = $"UPDATE [Student] SET totalWorkedHours='{count}' WHERE studentId='{info.StudentId}'";
-            DataBaseConnector connector = null;
+
             try
             {
-                connector = new DataBaseConnector();
-                connector.OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connector.Connection;
-
                 // Insert into worked hours
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(query);
 
                 // Update user table
-                cmd.CommandText = updateStudentQuery;
-                cmd.ExecuteNonQuery();
+                hdl.PerformRequest(updateStudentQuery);
             }
             catch(SqlException ex)
             {
                 isSucces = false;
                 Console.WriteLine(ex.Message.ToString());
-            }
-            finally
-            {
-                connector?.CloseConnection();
             }
             return isSucces;
         }
