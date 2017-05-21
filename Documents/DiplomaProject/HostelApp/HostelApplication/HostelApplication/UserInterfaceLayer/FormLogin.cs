@@ -21,9 +21,9 @@ namespace HostelApplication
             InitializeComponent();
 
             this.textBoxLogin.ForeColor = Color.Gray;
-            this.textBoxLogin.Text = "Login";
+            this.textBoxLogin.Text = "Логин";
             this.textBoxPassword.ForeColor = Color.Gray;
-            this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.Text = "Пароль";
 
             // Perform if cursor focused in login textbox
             FocusLoginInputCursor();
@@ -99,8 +99,8 @@ namespace HostelApplication
         {
             string login = this.textBoxLogin.Text;
             string password = this.textBoxPassword.Text;
-            if((textBoxLogin.ForeColor==Color.Gray && login.Equals("Login")) ||
-                textBoxPassword.ForeColor == Color.Gray && password.Equals("Password"))
+            if((textBoxLogin.ForeColor==Color.Gray && login.Equals("Логин")) ||
+                textBoxPassword.ForeColor == Color.Gray && password.Equals("Пароль"))
             {
                 MessageBox.Show("Поля логин и пароль далжны быть заполнены!");
             }

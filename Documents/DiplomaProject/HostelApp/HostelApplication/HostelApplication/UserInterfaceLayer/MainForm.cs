@@ -45,16 +45,23 @@ namespace HostelApplication
             switch (userType)
             {
                 case (int)UserTypeEnum.Admistrator:
+                    this.DisplayFunctionForAdministrator();
                     break;
                 case (int)UserTypeEnum.Student:
-                    mainFunctionMenuItem.Visible = false;
+                    this.DisplayFunctionForStudent();
                     break;
                 case (int)UserTypeEnum.Director:
-                    mainFunctionMenuItem.Visible = true;
+                    this.DisplayFunctionForDirector();
+                   // mainFunctionMenuItem.Visible = true;
                     break;
                 case (int)UserTypeEnum.Castellant:
+                    this.DisplayFunctionForCastellant();
                     break;
                 case (int)UserTypeEnum.Waggon:
+                    this.DisplayFunctionForWaggon();
+                    break;
+                case (int)UserTypeEnum.Mentor:
+                    this.DisplayFunctionForMentor();
                     break;
             }
         }
@@ -69,20 +76,23 @@ namespace HostelApplication
 
         private void dataGridViewStudents_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            int currentStudentIndex = dataGridViewStudents.CurrentRow.Index;
-            string login = dataGridViewStudents.Rows[currentStudentIndex].Cells[5].Value.ToString();
+            if (this.Usertype.Equals((int)UserTypeEnum.Admistrator) || this.Usertype.Equals((int)UserTypeEnum.Mentor) || this.Usertype.Equals((int)UserTypeEnum.Director))
+            {
+                int currentStudentIndex = dataGridViewStudents.CurrentRow.Index;
+                string login = dataGridViewStudents.Rows[currentStudentIndex].Cells[5].Value.ToString();
 
-            if (this.IsEditUserOptionChoose)
-            {
-                // open form for edit Student
-                UserEditingForm editUserForm = new UserEditingForm("student", login);
-                editUserForm.Show();
-            }
-            else
-            {
-                // open Information Form
-                InformationForm infoForm = new InformationForm(login, "student");
-                infoForm.Show();
+                if (this.IsEditUserOptionChoose)
+                {
+                    // open form for edit Student
+                    UserEditingForm editUserForm = new UserEditingForm("student", login);
+                    editUserForm.Show();
+                }
+                else
+                {
+                    // open Information Form
+                    InformationForm infoForm = new InformationForm(login, "student");
+                    infoForm.Show();
+                }
             }
         }
 
@@ -118,19 +128,22 @@ namespace HostelApplication
 
         private void dataGridViewEmployees_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            int currentEmployeeIndex = dataGridViewEmployees.CurrentRow.Index;
-            string login = dataGridViewEmployees.Rows[currentEmployeeIndex].Cells[5].Value.ToString();
-            if (this.IsEditUserOptionChoose)
+            if (this.Usertype.Equals((int)UserTypeEnum.Admistrator) || this.Usertype.Equals((int)UserTypeEnum.Mentor) || this.Usertype.Equals((int)UserTypeEnum.Director))
             {
-                // Open form for edit employee
-                UserEditingForm editUserForm = new UserEditingForm("employee", login);
-                editUserForm.Show();
-            }
-            else
-            {
-                // Open form for view information
-                InformationForm infoForm = new InformationForm(login, "employee");
-                infoForm.Show();
+                int currentEmployeeIndex = dataGridViewEmployees.CurrentRow.Index;
+                string login = dataGridViewEmployees.Rows[currentEmployeeIndex].Cells[5].Value.ToString();
+                if (this.IsEditUserOptionChoose)
+                {
+                    // Open form for edit employee
+                    UserEditingForm editUserForm = new UserEditingForm("employee", login);
+                    editUserForm.Show();
+                }
+                else
+                {
+                    // Open form for view information
+                    InformationForm infoForm = new InformationForm(login, "employee");
+                    infoForm.Show();
+                }
             }
         }
 
@@ -251,5 +264,104 @@ namespace HostelApplication
                 }
             }
         }
+
+        #region Display components for different users type
+
+        private void DisplayFunctionForAdministrator()
+        {
+            // main function
+            mainFunctionMenuItem.Visible = true;
+            removeEmployeeMenuItem.Visible = true;
+            removeStudentMenuItem.Visible = true;
+            addEmployeeMenuItem.Visible = true;
+            addStudentMenuItem.Visible = true;
+            editEmployeeMenuItem.Visible = true;
+            editStudentMenuItem.Visible = true;
+
+            ArrearsToolStripMenuItem.Visible = true;
+
+            // other function
+            OtherToolStripMenuItem.Visible = false;
+            buttonOpenFile.Visible = true;
+            cmbFileFormat.Visible = true;
+        }
+
+        private void DisplayFunctionForStudent()
+        {
+            mainFunctionMenuItem.Visible = false;
+            ArrearsToolStripMenuItem.Visible = false;
+            OtherToolStripMenuItem.Visible = false;
+            buttonOpenFile.Visible = false;
+            cmbFileFormat.Visible = false;
+        }
+
+        private void DisplayFunctionForDirector()
+        {
+            mainFunctionMenuItem.Visible = true;
+            removeEmployeeMenuItem.Visible = false;
+            removeStudentMenuItem.Visible = true;
+            addEmployeeMenuItem.Visible = false;
+            addStudentMenuItem.Visible = true;
+            editEmployeeMenuItem.Visible = false;
+            editStudentMenuItem.Visible = true;
+
+            ArrearsToolStripMenuItem.Visible = true;
+
+            OtherToolStripMenuItem.Visible = true;
+            InspectionToolStripMenuItem.Visible = true;
+            WorkedHoursArrearsToolStripMenuItem.Visible = true;
+            PaymentToolStripMenuItem.Visible = true;
+            AddThingsToolStripMenuItem.Visible = false;
+            buttonOpenFile.Visible = true;
+            cmbFileFormat.Visible = true;
+        }
+
+        private void DisplayFunctionForCastellant()
+        {
+            mainFunctionMenuItem.Visible = false;
+            removeEmployeeMenuItem.Visible = false;
+            ArrearsToolStripMenuItem.Visible = false;
+
+            OtherToolStripMenuItem.Visible = true;
+            InspectionToolStripMenuItem.Visible = false;
+            WorkedHoursArrearsToolStripMenuItem.Visible = false;
+            PaymentToolStripMenuItem.Visible = false;
+            AddThingsToolStripMenuItem.Visible = true;
+            buttonOpenFile.Visible = true;
+            cmbFileFormat.Visible = true;
+        }
+
+        private void DisplayFunctionForWaggon()
+        {
+            mainFunctionMenuItem.Visible = false;
+            removeEmployeeMenuItem.Visible = false;
+            ArrearsToolStripMenuItem.Visible = false;
+            OtherToolStripMenuItem.Visible = false;
+            buttonOpenFile.Visible = true;
+            cmbFileFormat.Visible = true;
+        }
+
+        private void DisplayFunctionForMentor()
+        {
+            mainFunctionMenuItem.Visible = true;
+            removeEmployeeMenuItem.Visible = false;
+            removeStudentMenuItem.Visible = false;
+            addEmployeeMenuItem.Visible = false;
+            addStudentMenuItem.Visible = false;
+            editEmployeeMenuItem.Visible = false;
+            editStudentMenuItem.Visible = true;
+
+
+            ArrearsToolStripMenuItem.Visible = true;
+
+            OtherToolStripMenuItem.Visible = true;
+            InspectionToolStripMenuItem.Visible = true;
+            WorkedHoursArrearsToolStripMenuItem.Visible = true;
+            PaymentToolStripMenuItem.Visible = true;
+            AddThingsToolStripMenuItem.Visible = false;
+            buttonOpenFile.Visible = true;
+            cmbFileFormat.Visible = true;
+        }
+        #endregion
     }
 }

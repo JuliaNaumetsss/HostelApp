@@ -35,6 +35,7 @@
             this.tbConformPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonChange = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbOldPassword
@@ -96,7 +97,7 @@
             // 
             // buttonChange
             // 
-            this.buttonChange.Location = new System.Drawing.Point(111, 232);
+            this.buttonChange.Location = new System.Drawing.Point(31, 227);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(137, 47);
             this.buttonChange.TabIndex = 6;
@@ -104,11 +105,23 @@
             this.buttonChange.UseVisualStyleBackColor = true;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(197, 227);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(137, 47);
+            this.buttonExit.TabIndex = 7;
+            this.buttonExit.Text = "Выйти";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 300);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbConformPassword);
@@ -133,5 +146,6 @@
         private System.Windows.Forms.TextBox tbConformPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonChange;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

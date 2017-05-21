@@ -12,6 +12,7 @@ namespace HostelApplication.Enum
         Student = 2,
         Director = 3,
         Castellant = 4,
-        Waggon = 5
+        Waggon = 5,
+        Mentor = 6
     }
 }

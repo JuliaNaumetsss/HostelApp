@@ -83,7 +83,7 @@
             this.Controls.Add(this.textBoxLogin);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();
 
