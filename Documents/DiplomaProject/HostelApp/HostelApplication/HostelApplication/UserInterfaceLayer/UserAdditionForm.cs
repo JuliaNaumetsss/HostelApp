@@ -32,7 +32,7 @@ namespace HostelApplication
         private void InitializeComponentForStudent()
         {
             labelFilePath.Text = "";
-            this.Text = "Добавить студента";
+            this.Text = "Добавление студента";
             panelEmployeeInfo.Visible = false;
             panelStudentInfo.Visible = true;
             AddStudentPage addStudentPage = new AddStudentPage();
@@ -45,7 +45,7 @@ namespace HostelApplication
 
         private void InitializeComponentForEmployee()
         {            
-            this.Text = "Добавить сотрудника";
+            this.Text = "Добавление сотрудника";
             panelEmployeeInfo.Visible = true;
             panelStudentInfo.Visible = false;
 

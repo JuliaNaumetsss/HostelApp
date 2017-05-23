@@ -97,6 +97,7 @@ namespace HostelApplication.UserInterfaceLayer
             switch(this.TypeOperation)
             {
                 case "hours":
+                    this.Text = "Добавление ОХЧ";
                     textBoxPaymentSum.Visible = false;
                     tbHoursCount.Visible = true;
                     label1.Visible = false;
@@ -105,6 +106,7 @@ namespace HostelApplication.UserInterfaceLayer
                     labelDescription.Visible = true;
                     break;
                 case "payment":
+                    this.Text = "Добавление оплаты";
                     textBoxPaymentSum.Visible = true;
                     tbHoursCount.Visible = false;
                     label1.Visible = true;

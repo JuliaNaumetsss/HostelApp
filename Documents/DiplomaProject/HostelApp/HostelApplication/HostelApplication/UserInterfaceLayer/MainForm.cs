@@ -274,7 +274,7 @@ namespace HostelApplication
             ArrearsToolStripMenuItem.Visible = true;
 
             // other function
-            OtherToolStripMenuItem.Visible = false;
+            OtherToolStripMenuItem.Visible = true;
             buttonOpenFile.Visible = true;
             cmbFileFormat.Visible = true;
         }
