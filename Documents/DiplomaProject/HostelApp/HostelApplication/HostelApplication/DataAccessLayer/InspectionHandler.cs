@@ -46,7 +46,7 @@ namespace HostelApplication.DataAccessLayer
 
         public bool AddInspection(Inspection inspection)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -124,7 +124,7 @@ namespace HostelApplication.DataAccessLayer
         private bool AddRecord(string query)
         {
             bool isSuccess = true;
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             try
             {
                 hdl.PerformRequest(query);

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HostelApplication.DataAccessLayer
 {
-    public class AddEtitDataInDataBase
+    public class AddEditDataInDataBase
     {
         public void PerformRequest(string query)
         {

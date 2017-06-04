@@ -36,27 +36,30 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(128, 35);
+            this.textBoxLogin.Location = new System.Drawing.Point(120, 36);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxLogin.MaxLength = 15;
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(175, 26);
+            this.textBoxLogin.Size = new System.Drawing.Size(232, 33);
             this.textBoxLogin.TabIndex = 1;
             this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_KeyPress);
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(128, 86);
+            this.textBoxPassword.Location = new System.Drawing.Point(120, 100);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPassword.MaxLength = 16;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(175, 26);
+            this.textBoxPassword.Size = new System.Drawing.Size(232, 33);
             this.textBoxPassword.TabIndex = 4;
             this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // buttonSignIn
             // 
-            this.buttonSignIn.Location = new System.Drawing.Point(157, 141);
+            this.buttonSignIn.Location = new System.Drawing.Point(158, 168);
+            this.buttonSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(126, 40);
+            this.buttonSignIn.Size = new System.Drawing.Size(168, 50);
             this.buttonSignIn.TabIndex = 5;
             this.buttonSignIn.Text = "Войти";
             this.buttonSignIn.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // 
             // btExitApp
             // 
-            this.btExitApp.Location = new System.Drawing.Point(157, 201);
+            this.btExitApp.Location = new System.Drawing.Point(158, 243);
+            this.btExitApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btExitApp.Name = "btExitApp";
-            this.btExitApp.Size = new System.Drawing.Size(126, 40);
+            this.btExitApp.Size = new System.Drawing.Size(168, 50);
             this.btExitApp.TabIndex = 6;
             this.btExitApp.Text = "Выход";
             this.btExitApp.UseVisualStyleBackColor = true;
@@ -74,14 +78,16 @@
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 308);
+            this.ClientSize = new System.Drawing.Size(464, 339);
             this.ControlBox = false;
             this.Controls.Add(this.btExitApp);
             this.Controls.Add(this.buttonSignIn);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
+            this.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";

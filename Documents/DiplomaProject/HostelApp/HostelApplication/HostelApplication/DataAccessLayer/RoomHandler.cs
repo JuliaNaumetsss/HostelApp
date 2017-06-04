@@ -109,7 +109,7 @@ namespace HostelApplication.Handler
 
         private void UpdateRoomCount(string roomId, int emptyPlaceCount)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             Room room = this.GetRoomById(roomId);
             string query = $"UPDATE [Room] SET [Room].emptyPlaceCount = {emptyPlaceCount} WHERE [Room].idRoom='{roomId.Trim()}'";
             try

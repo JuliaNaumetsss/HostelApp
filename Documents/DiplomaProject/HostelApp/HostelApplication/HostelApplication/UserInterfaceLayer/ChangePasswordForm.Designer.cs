@@ -40,66 +40,80 @@
             // 
             // tbOldPassword
             // 
-            this.tbOldPassword.Location = new System.Drawing.Point(179, 47);
+            this.tbOldPassword.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbOldPassword.Location = new System.Drawing.Point(259, 61);
+            this.tbOldPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbOldPassword.MaxLength = 16;
             this.tbOldPassword.Name = "tbOldPassword";
             this.tbOldPassword.PasswordChar = '*';
-            this.tbOldPassword.Size = new System.Drawing.Size(155, 26);
+            this.tbOldPassword.Size = new System.Drawing.Size(222, 33);
             this.tbOldPassword.TabIndex = 0;
             this.tbOldPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOldPassword_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 47);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(46, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Старый пароль";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 109);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(56, 146);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(146, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Новый пароль";
             // 
             // tbNewPassword
             // 
-            this.tbNewPassword.Location = new System.Drawing.Point(179, 106);
+            this.tbNewPassword.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbNewPassword.Location = new System.Drawing.Point(259, 138);
+            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbNewPassword.MaxLength = 16;
             this.tbNewPassword.Name = "tbNewPassword";
             this.tbNewPassword.PasswordChar = '*';
-            this.tbNewPassword.Size = new System.Drawing.Size(155, 26);
+            this.tbNewPassword.Size = new System.Drawing.Size(222, 33);
             this.tbNewPassword.TabIndex = 3;
             this.tbNewPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNewPassword_KeyPress);
             // 
             // tbConformPassword
             // 
-            this.tbConformPassword.Location = new System.Drawing.Point(179, 171);
+            this.tbConformPassword.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbConformPassword.Location = new System.Drawing.Point(259, 222);
+            this.tbConformPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbConformPassword.MaxLength = 16;
             this.tbConformPassword.Name = "tbConformPassword";
             this.tbConformPassword.PasswordChar = '*';
-            this.tbConformPassword.Size = new System.Drawing.Size(155, 26);
+            this.tbConformPassword.Size = new System.Drawing.Size(222, 33);
             this.tbConformPassword.TabIndex = 4;
             this.tbConformPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbConformPassword_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 157);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(56, 205);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 40);
+            this.label3.Size = new System.Drawing.Size(165, 50);
             this.label3.TabIndex = 5;
             this.label3.Text = "Подтверждение \r\nнового пароля";
             // 
             // buttonChange
             // 
-            this.buttonChange.Location = new System.Drawing.Point(31, 227);
+            this.buttonChange.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChange.Location = new System.Drawing.Point(45, 295);
+            this.buttonChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonChange.Name = "buttonChange";
-            this.buttonChange.Size = new System.Drawing.Size(137, 47);
+            this.buttonChange.Size = new System.Drawing.Size(198, 61);
             this.buttonChange.TabIndex = 6;
             this.buttonChange.Text = "Изменить";
             this.buttonChange.UseVisualStyleBackColor = true;
@@ -107,9 +121,11 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(197, 227);
+            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.Location = new System.Drawing.Point(272, 295);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(137, 47);
+            this.buttonExit.Size = new System.Drawing.Size(198, 61);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.Text = "Выйти";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -117,9 +133,9 @@
             // 
             // ChangePasswordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 300);
+            this.ClientSize = new System.Drawing.Size(529, 396);
             this.ControlBox = false;
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonChange);
@@ -129,6 +145,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbOldPassword);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChangePasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение пароля";

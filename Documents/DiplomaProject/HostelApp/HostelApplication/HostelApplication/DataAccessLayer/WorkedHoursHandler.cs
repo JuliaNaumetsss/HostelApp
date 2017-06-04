@@ -10,7 +10,7 @@ namespace HostelApplication.DataAccessLayer
     {
         public bool AddWorkedHoursInformation(WorkedHours info)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSucces = true;
 
             int count = this.GetWorkedHoursForStudentByLogin(info.StudentId) + info.HoursCount;

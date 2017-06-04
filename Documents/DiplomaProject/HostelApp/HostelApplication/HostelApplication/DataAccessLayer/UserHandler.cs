@@ -12,7 +12,7 @@ namespace HostelApplication.Handler
     {
         public bool UpdateUserPassword(string login, string newPassword)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             string query = $"UPDATE [User] SET password='{newPassword}' WHERE login='{login}'";
             bool isUpdated = true;
             try

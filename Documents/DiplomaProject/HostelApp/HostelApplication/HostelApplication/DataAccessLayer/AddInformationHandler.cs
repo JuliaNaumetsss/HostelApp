@@ -9,7 +9,7 @@ namespace HostelApplication.Handler
     {
         public bool AddEmployee(Employee employee)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {

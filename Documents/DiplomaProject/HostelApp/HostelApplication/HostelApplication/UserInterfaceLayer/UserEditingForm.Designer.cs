@@ -81,105 +81,131 @@
             this.panelCommonInfo.Controls.Add(this.lbAddress);
             this.panelCommonInfo.Controls.Add(this.tbAddress);
             this.panelCommonInfo.Controls.Add(this.lbPassport);
-            this.panelCommonInfo.Location = new System.Drawing.Point(12, 25);
+            this.panelCommonInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelCommonInfo.Location = new System.Drawing.Point(16, 31);
+            this.panelCommonInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCommonInfo.Name = "panelCommonInfo";
-            this.panelCommonInfo.Size = new System.Drawing.Size(400, 346);
+            this.panelCommonInfo.Size = new System.Drawing.Size(533, 465);
             this.panelCommonInfo.TabIndex = 0;
             // 
             // tbPassport
             // 
-            this.tbPassport.Location = new System.Drawing.Point(158, 277);
+            this.tbPassport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPassport.Location = new System.Drawing.Point(211, 361);
+            this.tbPassport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPassport.Name = "tbPassport";
-            this.tbPassport.Size = new System.Drawing.Size(197, 26);
+            this.tbPassport.Size = new System.Drawing.Size(261, 35);
             this.tbPassport.TabIndex = 38;
             // 
             // tbPhone
             // 
-            this.tbPhone.Location = new System.Drawing.Point(158, 169);
+            this.tbPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPhone.Location = new System.Drawing.Point(211, 226);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPhone.Mask = "+(375)00-000-00-00";
             this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(197, 26);
+            this.tbPhone.Size = new System.Drawing.Size(261, 35);
             this.tbPhone.TabIndex = 40;
             // 
             // tbSurname
             // 
-            this.tbSurname.Location = new System.Drawing.Point(158, 29);
+            this.tbSurname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSurname.Location = new System.Drawing.Point(211, 51);
+            this.tbSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSurname.Name = "tbSurname";
-            this.tbSurname.Size = new System.Drawing.Size(197, 26);
+            this.tbSurname.Size = new System.Drawing.Size(261, 35);
             this.tbSurname.TabIndex = 29;
             // 
             // lbSurname
             // 
             this.lbSurname.AutoSize = true;
-            this.lbSurname.Location = new System.Drawing.Point(60, 32);
+            this.lbSurname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbSurname.Location = new System.Drawing.Point(60, 55);
+            this.lbSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSurname.Name = "lbSurname";
-            this.lbSurname.Size = new System.Drawing.Size(81, 20);
+            this.lbSurname.Size = new System.Drawing.Size(105, 27);
             this.lbSurname.TabIndex = 30;
             this.lbSurname.Text = "Фамилия";
             // 
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(64, 75);
+            this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbName.Location = new System.Drawing.Point(60, 109);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(40, 20);
+            this.lbName.Size = new System.Drawing.Size(55, 27);
             this.lbName.TabIndex = 31;
             this.lbName.Text = "Имя";
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(158, 72);
+            this.tbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbName.Location = new System.Drawing.Point(211, 105);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(197, 26);
+            this.tbName.Size = new System.Drawing.Size(261, 35);
             this.tbName.TabIndex = 32;
             // 
             // tbPatronymic
             // 
-            this.tbPatronymic.Location = new System.Drawing.Point(158, 118);
+            this.tbPatronymic.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPatronymic.Location = new System.Drawing.Point(211, 163);
+            this.tbPatronymic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPatronymic.Name = "tbPatronymic";
-            this.tbPatronymic.Size = new System.Drawing.Size(197, 26);
+            this.tbPatronymic.Size = new System.Drawing.Size(261, 35);
             this.tbPatronymic.TabIndex = 33;
             // 
             // labPatronymic
             // 
             this.labPatronymic.AutoSize = true;
-            this.labPatronymic.Location = new System.Drawing.Point(64, 118);
+            this.labPatronymic.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labPatronymic.Location = new System.Drawing.Point(60, 163);
+            this.labPatronymic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labPatronymic.Name = "labPatronymic";
-            this.labPatronymic.Size = new System.Drawing.Size(83, 20);
+            this.labPatronymic.Size = new System.Drawing.Size(107, 27);
             this.labPatronymic.TabIndex = 34;
             this.labPatronymic.Text = "Отчество";
             // 
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
-            this.lbPhone.Location = new System.Drawing.Point(64, 169);
+            this.lbPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbPhone.Location = new System.Drawing.Point(64, 226);
+            this.lbPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(88, 40);
+            this.lbPhone.Size = new System.Drawing.Size(108, 54);
             this.lbPhone.TabIndex = 35;
             this.lbPhone.Text = "Номер \r\nтелефона";
             // 
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
-            this.lbAddress.Location = new System.Drawing.Point(64, 226);
+            this.lbAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbAddress.Location = new System.Drawing.Point(64, 297);
+            this.lbAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(57, 20);
+            this.lbAddress.Size = new System.Drawing.Size(76, 27);
             this.lbAddress.TabIndex = 36;
             this.lbAddress.Text = "Адрес";
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(158, 226);
+            this.tbAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbAddress.Location = new System.Drawing.Point(211, 297);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(197, 26);
+            this.tbAddress.Size = new System.Drawing.Size(261, 35);
             this.tbAddress.TabIndex = 37;
             // 
             // lbPassport
             // 
             this.lbPassport.AutoSize = true;
-            this.lbPassport.Location = new System.Drawing.Point(45, 277);
+            this.lbPassport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbPassport.Location = new System.Drawing.Point(60, 361);
+            this.lbPassport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassport.Name = "lbPassport";
-            this.lbPassport.Size = new System.Drawing.Size(107, 40);
+            this.lbPassport.Size = new System.Drawing.Size(144, 54);
             this.lbPassport.TabIndex = 39;
             this.lbPassport.Text = "Паспортные \r\nданные";
             // 
@@ -194,54 +220,66 @@
             this.panelStudentInfo.Controls.Add(this.cmbCourse);
             this.panelStudentInfo.Controls.Add(this.lbGroup);
             this.panelStudentInfo.Controls.Add(this.tbGruop);
-            this.panelStudentInfo.Location = new System.Drawing.Point(436, 25);
+            this.panelStudentInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelStudentInfo.Location = new System.Drawing.Point(581, 31);
+            this.panelStudentInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelStudentInfo.Name = "panelStudentInfo";
-            this.panelStudentInfo.Size = new System.Drawing.Size(400, 346);
+            this.panelStudentInfo.Size = new System.Drawing.Size(533, 465);
             this.panelStudentInfo.TabIndex = 1;
             // 
             // cmbRoomStudent
             // 
             this.cmbRoomStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoomStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbRoomStudent.FormattingEnabled = true;
-            this.cmbRoomStudent.Location = new System.Drawing.Point(164, 173);
+            this.cmbRoomStudent.Location = new System.Drawing.Point(198, 262);
+            this.cmbRoomStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRoomStudent.Name = "cmbRoomStudent";
-            this.cmbRoomStudent.Size = new System.Drawing.Size(197, 28);
+            this.cmbRoomStudent.Size = new System.Drawing.Size(261, 35);
             this.cmbRoomStudent.TabIndex = 35;
             // 
             // cmbFloorStudent
             // 
             this.cmbFloorStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFloorStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbFloorStudent.FormattingEnabled = true;
-            this.cmbFloorStudent.Location = new System.Drawing.Point(164, 121);
+            this.cmbFloorStudent.Location = new System.Drawing.Point(198, 197);
+            this.cmbFloorStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbFloorStudent.Name = "cmbFloorStudent";
-            this.cmbFloorStudent.Size = new System.Drawing.Size(197, 28);
+            this.cmbFloorStudent.Size = new System.Drawing.Size(261, 35);
             this.cmbFloorStudent.TabIndex = 38;
             this.cmbFloorStudent.SelectedIndexChanged += new System.EventHandler(this.cmbFloorStudent_SelectedIndexChanged);
             // 
             // lbFloor2
             // 
             this.lbFloor2.AutoSize = true;
-            this.lbFloor2.Location = new System.Drawing.Point(97, 124);
+            this.lbFloor2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbFloor2.Location = new System.Drawing.Point(78, 201);
+            this.lbFloor2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFloor2.Name = "lbFloor2";
-            this.lbFloor2.Size = new System.Drawing.Size(50, 20);
+            this.lbFloor2.Size = new System.Drawing.Size(66, 27);
             this.lbFloor2.TabIndex = 37;
             this.lbFloor2.Text = "Этаж";
             // 
             // lmRoom2
             // 
             this.lmRoom2.AutoSize = true;
-            this.lmRoom2.Location = new System.Drawing.Point(77, 176);
+            this.lmRoom2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lmRoom2.Location = new System.Drawing.Point(80, 267);
+            this.lmRoom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lmRoom2.Name = "lmRoom2";
-            this.lmRoom2.Size = new System.Drawing.Size(75, 20);
+            this.lmRoom2.Size = new System.Drawing.Size(98, 27);
             this.lmRoom2.TabIndex = 36;
             this.lmRoom2.Text = "Комната";
             // 
             // checkBoxHeadFloor
             // 
             this.checkBoxHeadFloor.AutoSize = true;
-            this.checkBoxHeadFloor.Location = new System.Drawing.Point(164, 231);
+            this.checkBoxHeadFloor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxHeadFloor.Location = new System.Drawing.Point(198, 329);
+            this.checkBoxHeadFloor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxHeadFloor.Name = "checkBoxHeadFloor";
-            this.checkBoxHeadFloor.Size = new System.Drawing.Size(156, 24);
+            this.checkBoxHeadFloor.Size = new System.Drawing.Size(192, 31);
             this.checkBoxHeadFloor.TabIndex = 34;
             this.checkBoxHeadFloor.Text = "староста этажа";
             this.checkBoxHeadFloor.UseVisualStyleBackColor = true;
@@ -249,15 +287,18 @@
             // lbCourse
             // 
             this.lbCourse.AutoSize = true;
-            this.lbCourse.Location = new System.Drawing.Point(104, 73);
+            this.lbCourse.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCourse.Location = new System.Drawing.Point(78, 136);
+            this.lbCourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCourse.Name = "lbCourse";
-            this.lbCourse.Size = new System.Drawing.Size(43, 20);
+            this.lbCourse.Size = new System.Drawing.Size(61, 27);
             this.lbCourse.TabIndex = 33;
             this.lbCourse.Text = "Курс";
             // 
             // cmbCourse
             // 
             this.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCourse.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbCourse.FormattingEnabled = true;
             this.cmbCourse.Items.AddRange(new object[] {
             "1",
@@ -265,25 +306,30 @@
             "3",
             "4",
             "5"});
-            this.cmbCourse.Location = new System.Drawing.Point(161, 70);
+            this.cmbCourse.Location = new System.Drawing.Point(198, 132);
+            this.cmbCourse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(197, 28);
+            this.cmbCourse.Size = new System.Drawing.Size(261, 35);
             this.cmbCourse.TabIndex = 32;
             // 
             // lbGroup
             // 
             this.lbGroup.AutoSize = true;
-            this.lbGroup.Location = new System.Drawing.Point(37, 32);
+            this.lbGroup.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbGroup.Location = new System.Drawing.Point(78, 57);
+            this.lbGroup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGroup.Name = "lbGroup";
-            this.lbGroup.Size = new System.Drawing.Size(115, 20);
+            this.lbGroup.Size = new System.Drawing.Size(88, 54);
             this.lbGroup.TabIndex = 31;
-            this.lbGroup.Text = "Номер группы";
+            this.lbGroup.Text = "Номер \r\nгруппы";
             // 
             // tbGruop
             // 
-            this.tbGruop.Location = new System.Drawing.Point(161, 34);
+            this.tbGruop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbGruop.Location = new System.Drawing.Point(198, 63);
+            this.tbGruop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbGruop.Name = "tbGruop";
-            this.tbGruop.Size = new System.Drawing.Size(197, 26);
+            this.tbGruop.Size = new System.Drawing.Size(261, 35);
             this.tbGruop.TabIndex = 30;
             // 
             // panelEmployeeInfo
@@ -296,33 +342,38 @@
             this.panelEmployeeInfo.Controls.Add(this.lbUserType);
             this.panelEmployeeInfo.Controls.Add(this.lbFloor);
             this.panelEmployeeInfo.Controls.Add(this.lbRoom);
-            this.panelEmployeeInfo.Location = new System.Drawing.Point(436, 25);
+            this.panelEmployeeInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelEmployeeInfo.Location = new System.Drawing.Point(581, 31);
+            this.panelEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEmployeeInfo.Name = "panelEmployeeInfo";
-            this.panelEmployeeInfo.Size = new System.Drawing.Size(400, 346);
+            this.panelEmployeeInfo.Size = new System.Drawing.Size(533, 432);
             this.panelEmployeeInfo.TabIndex = 31;
             // 
             // tbWorkPhone
             // 
-            this.tbWorkPhone.Location = new System.Drawing.Point(171, 193);
+            this.tbWorkPhone.Location = new System.Drawing.Point(228, 241);
+            this.tbWorkPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbWorkPhone.Name = "tbWorkPhone";
-            this.tbWorkPhone.Size = new System.Drawing.Size(197, 26);
+            this.tbWorkPhone.Size = new System.Drawing.Size(261, 35);
             this.tbWorkPhone.TabIndex = 19;
             // 
             // cmbUserType
             // 
             this.cmbUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUserType.FormattingEnabled = true;
-            this.cmbUserType.Location = new System.Drawing.Point(171, 133);
+            this.cmbUserType.Location = new System.Drawing.Point(228, 166);
+            this.cmbUserType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUserType.Name = "cmbUserType";
-            this.cmbUserType.Size = new System.Drawing.Size(197, 28);
+            this.cmbUserType.Size = new System.Drawing.Size(261, 35);
             this.cmbUserType.TabIndex = 18;
             // 
             // lbWorkPhone
             // 
             this.lbWorkPhone.AutoSize = true;
-            this.lbWorkPhone.Location = new System.Drawing.Point(26, 193);
+            this.lbWorkPhone.Location = new System.Drawing.Point(35, 241);
+            this.lbWorkPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWorkPhone.Name = "lbWorkPhone";
-            this.lbWorkPhone.Size = new System.Drawing.Size(137, 40);
+            this.lbWorkPhone.Size = new System.Drawing.Size(181, 54);
             this.lbWorkPhone.TabIndex = 20;
             this.lbWorkPhone.Text = "Номер рабочего \r\nтелефона";
             // 
@@ -330,52 +381,59 @@
             // 
             this.cmbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoom.FormattingEnabled = true;
-            this.cmbRoom.Location = new System.Drawing.Point(168, 76);
+            this.cmbRoom.Location = new System.Drawing.Point(224, 95);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(197, 28);
+            this.cmbRoom.Size = new System.Drawing.Size(261, 35);
             this.cmbRoom.TabIndex = 21;
             // 
             // cmbFloor
             // 
             this.cmbFloor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFloor.FormattingEnabled = true;
-            this.cmbFloor.Location = new System.Drawing.Point(168, 24);
+            this.cmbFloor.Location = new System.Drawing.Point(224, 30);
+            this.cmbFloor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbFloor.Name = "cmbFloor";
-            this.cmbFloor.Size = new System.Drawing.Size(197, 28);
+            this.cmbFloor.Size = new System.Drawing.Size(261, 35);
             this.cmbFloor.TabIndex = 25;
             // 
             // lbUserType
             // 
             this.lbUserType.AutoSize = true;
-            this.lbUserType.Location = new System.Drawing.Point(48, 141);
+            this.lbUserType.Location = new System.Drawing.Point(64, 176);
+            this.lbUserType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUserType.Name = "lbUserType";
-            this.lbUserType.Size = new System.Drawing.Size(95, 20);
+            this.lbUserType.Size = new System.Drawing.Size(127, 27);
             this.lbUserType.TabIndex = 22;
             this.lbUserType.Text = "Должность";
             // 
             // lbFloor
             // 
             this.lbFloor.AutoSize = true;
-            this.lbFloor.Location = new System.Drawing.Point(87, 27);
+            this.lbFloor.Location = new System.Drawing.Point(116, 34);
+            this.lbFloor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFloor.Name = "lbFloor";
-            this.lbFloor.Size = new System.Drawing.Size(50, 20);
+            this.lbFloor.Size = new System.Drawing.Size(66, 27);
             this.lbFloor.TabIndex = 24;
             this.lbFloor.Text = "Этаж";
             // 
             // lbRoom
             // 
             this.lbRoom.AutoSize = true;
-            this.lbRoom.Location = new System.Drawing.Point(81, 83);
+            this.lbRoom.Location = new System.Drawing.Point(108, 104);
+            this.lbRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRoom.Name = "lbRoom";
-            this.lbRoom.Size = new System.Drawing.Size(75, 20);
+            this.lbRoom.Size = new System.Drawing.Size(98, 27);
             this.lbRoom.TabIndex = 23;
             this.lbRoom.Text = "Комната";
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(258, 394);
+            this.buttonEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEdit.Location = new System.Drawing.Point(344, 504);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(154, 37);
+            this.buttonEdit.Size = new System.Drawing.Size(205, 46);
             this.buttonEdit.TabIndex = 32;
             this.buttonEdit.Text = "Редактировать";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -383,9 +441,11 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(436, 394);
+            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.Location = new System.Drawing.Point(581, 504);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(154, 37);
+            this.buttonExit.Size = new System.Drawing.Size(205, 46);
             this.buttonExit.TabIndex = 33;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -393,15 +453,17 @@
             // 
             // UserEditingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 443);
+            this.ClientSize = new System.Drawing.Size(1168, 580);
             this.ControlBox = false;
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.panelStudentInfo);
             this.Controls.Add(this.panelEmployeeInfo);
             this.Controls.Add(this.panelCommonInfo);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserEditingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserEditingForm";

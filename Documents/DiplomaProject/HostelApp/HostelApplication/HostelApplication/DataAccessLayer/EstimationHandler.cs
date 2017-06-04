@@ -9,7 +9,7 @@ namespace HostelApplication.DataAccessLayer
     {
         public bool AddEstimationInfo(Estimation estimation)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;            
             try
             {

@@ -61,26 +61,29 @@
             // 
             // dateInspection
             // 
-            this.dateInspection.Location = new System.Drawing.Point(211, 14);
+            this.dateInspection.Location = new System.Drawing.Point(281, 59);
+            this.dateInspection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateInspection.Name = "dateInspection";
-            this.dateInspection.Size = new System.Drawing.Size(200, 26);
+            this.dateInspection.Size = new System.Drawing.Size(282, 33);
             this.dateInspection.TabIndex = 0;
             // 
             // cmbFloor
             // 
             this.cmbFloor.FormattingEnabled = true;
-            this.cmbFloor.Location = new System.Drawing.Point(211, 86);
+            this.cmbFloor.Location = new System.Drawing.Point(281, 129);
+            this.cmbFloor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbFloor.Name = "cmbFloor";
-            this.cmbFloor.Size = new System.Drawing.Size(200, 28);
+            this.cmbFloor.Size = new System.Drawing.Size(282, 33);
             this.cmbFloor.TabIndex = 1;
             this.cmbFloor.SelectedIndexChanged += new System.EventHandler(this.cmbFloor_SelectedIndexChanged);
             // 
             // cmbRoom
             // 
             this.cmbRoom.FormattingEnabled = true;
-            this.cmbRoom.Location = new System.Drawing.Point(211, 159);
+            this.cmbRoom.Location = new System.Drawing.Point(281, 204);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(200, 28);
+            this.cmbRoom.Size = new System.Drawing.Size(282, 33);
             this.cmbRoom.TabIndex = 2;
             // 
             // cmbRestRoom
@@ -93,9 +96,10 @@
             "3",
             "4",
             "5"});
-            this.cmbRestRoom.Location = new System.Drawing.Point(187, 62);
+            this.cmbRestRoom.Location = new System.Drawing.Point(250, 77);
+            this.cmbRestRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRestRoom.Name = "cmbRestRoom";
-            this.cmbRestRoom.Size = new System.Drawing.Size(121, 28);
+            this.cmbRestRoom.Size = new System.Drawing.Size(160, 33);
             this.cmbRestRoom.TabIndex = 3;
             // 
             // panel1
@@ -113,71 +117,80 @@
             this.panel1.Controls.Add(this.cmbHall);
             this.panel1.Controls.Add(this.cmbBathroom);
             this.panel1.Controls.Add(this.cmbRestRoom);
-            this.panel1.Location = new System.Drawing.Point(482, 26);
+            this.panel1.Location = new System.Drawing.Point(643, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 348);
+            this.panel1.Size = new System.Drawing.Size(437, 515);
             this.panel1.TabIndex = 4;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(54, 307);
+            this.label12.Location = new System.Drawing.Point(62, 408);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 20);
+            this.label12.Size = new System.Drawing.Size(117, 25);
             this.label12.TabIndex = 15;
             this.label12.Text = "Комната \'б\'";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 261);
+            this.label11.Location = new System.Drawing.Point(62, 342);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 20);
+            this.label11.Size = new System.Drawing.Size(116, 25);
             this.label11.TabIndex = 14;
             this.label11.Text = "Комната \'а\'";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 210);
+            this.label10.Location = new System.Drawing.Point(62, 270);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.Size = new System.Drawing.Size(68, 25);
             this.label10.TabIndex = 13;
             this.label10.Text = "Кухня";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(46, 164);
+            this.label9.Location = new System.Drawing.Point(62, 214);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 20);
+            this.label9.Size = new System.Drawing.Size(93, 25);
             this.label9.TabIndex = 12;
             this.label9.Text = "Коридор";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 113);
+            this.label8.Location = new System.Drawing.Point(62, 146);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 20);
+            this.label8.Size = new System.Drawing.Size(162, 25);
             this.label8.TabIndex = 11;
             this.label8.Text = "Ванная комната";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 16);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(56, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(262, 20);
+            this.label7.Size = new System.Drawing.Size(328, 25);
             this.label7.TabIndex = 10;
             this.label7.Text = "Оценки за санитарное состояние";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 63);
+            this.label6.Location = new System.Drawing.Point(57, 78);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 20);
+            this.label6.Size = new System.Drawing.Size(174, 25);
             this.label6.TabIndex = 9;
             this.label6.Text = "Уборная комната";
             // 
@@ -191,9 +204,10 @@
             "3",
             "4",
             "5"});
-            this.cmbRoomB.Location = new System.Drawing.Point(187, 302);
+            this.cmbRoomB.Location = new System.Drawing.Point(250, 405);
+            this.cmbRoomB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRoomB.Name = "cmbRoomB";
-            this.cmbRoomB.Size = new System.Drawing.Size(121, 28);
+            this.cmbRoomB.Size = new System.Drawing.Size(160, 33);
             this.cmbRoomB.TabIndex = 8;
             // 
             // cmbRoomA
@@ -206,9 +220,10 @@
             "3",
             "4",
             "5"});
-            this.cmbRoomA.Location = new System.Drawing.Point(187, 254);
+            this.cmbRoomA.Location = new System.Drawing.Point(250, 331);
+            this.cmbRoomA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRoomA.Name = "cmbRoomA";
-            this.cmbRoomA.Size = new System.Drawing.Size(121, 28);
+            this.cmbRoomA.Size = new System.Drawing.Size(160, 33);
             this.cmbRoomA.TabIndex = 7;
             // 
             // cmbKitchen
@@ -221,9 +236,10 @@
             "3",
             "4",
             "5"});
-            this.cmbKitchen.Location = new System.Drawing.Point(187, 207);
+            this.cmbKitchen.Location = new System.Drawing.Point(250, 267);
+            this.cmbKitchen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbKitchen.Name = "cmbKitchen";
-            this.cmbKitchen.Size = new System.Drawing.Size(121, 28);
+            this.cmbKitchen.Size = new System.Drawing.Size(160, 33);
             this.cmbKitchen.TabIndex = 6;
             // 
             // cmbHall
@@ -236,9 +252,10 @@
             "3",
             "4",
             "5"});
-            this.cmbHall.Location = new System.Drawing.Point(187, 156);
+            this.cmbHall.Location = new System.Drawing.Point(250, 204);
+            this.cmbHall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbHall.Name = "cmbHall";
-            this.cmbHall.Size = new System.Drawing.Size(121, 28);
+            this.cmbHall.Size = new System.Drawing.Size(160, 33);
             this.cmbHall.TabIndex = 5;
             // 
             // cmbBathroom
@@ -251,16 +268,18 @@
             "3",
             "4",
             "5"});
-            this.cmbBathroom.Location = new System.Drawing.Point(187, 110);
+            this.cmbBathroom.Location = new System.Drawing.Point(250, 143);
+            this.cmbBathroom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBathroom.Name = "cmbBathroom";
-            this.cmbBathroom.Size = new System.Drawing.Size(121, 28);
+            this.cmbBathroom.Size = new System.Drawing.Size(160, 33);
             this.cmbBathroom.TabIndex = 4;
             // 
             // tbFirstEmployee
             // 
-            this.tbFirstEmployee.Location = new System.Drawing.Point(211, 228);
+            this.tbFirstEmployee.Location = new System.Drawing.Point(281, 275);
+            this.tbFirstEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbFirstEmployee.Name = "tbFirstEmployee";
-            this.tbFirstEmployee.Size = new System.Drawing.Size(200, 26);
+            this.tbFirstEmployee.Size = new System.Drawing.Size(282, 33);
             this.tbFirstEmployee.TabIndex = 5;
             this.tbFirstEmployee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstEmployee_KeyPress);
             // 
@@ -268,61 +287,68 @@
             // 
             this.cmbSecondEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSecondEmployee.FormattingEnabled = true;
-            this.cmbSecondEmployee.Location = new System.Drawing.Point(211, 294);
+            this.cmbSecondEmployee.Location = new System.Drawing.Point(281, 347);
+            this.cmbSecondEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSecondEmployee.Name = "cmbSecondEmployee";
-            this.cmbSecondEmployee.Size = new System.Drawing.Size(200, 28);
+            this.cmbSecondEmployee.Size = new System.Drawing.Size(282, 33);
             this.cmbSecondEmployee.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 19);
+            this.label1.Location = new System.Drawing.Point(24, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "Дата проверки";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 86);
+            this.label2.Location = new System.Drawing.Point(28, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.Size = new System.Drawing.Size(133, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Номер этажа";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 164);
+            this.label3.Location = new System.Drawing.Point(28, 204);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 20);
+            this.label3.Size = new System.Drawing.Size(160, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Номер комнаты";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 228);
+            this.label4.Location = new System.Drawing.Point(28, 275);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 20);
+            this.label4.Size = new System.Drawing.Size(223, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "Первый проверяющий";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 297);
+            this.label5.Location = new System.Drawing.Point(28, 355);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 20);
+            this.label5.Size = new System.Drawing.Size(219, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Второй проверяющий";
             // 
             // buttonAddInspection
             // 
-            this.buttonAddInspection.Location = new System.Drawing.Point(235, 389);
+            this.buttonAddInspection.Location = new System.Drawing.Point(352, 555);
+            this.buttonAddInspection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAddInspection.Name = "buttonAddInspection";
-            this.buttonAddInspection.Size = new System.Drawing.Size(175, 60);
+            this.buttonAddInspection.Size = new System.Drawing.Size(227, 75);
             this.buttonAddInspection.TabIndex = 12;
             this.buttonAddInspection.Text = "Добавить запись о\r\nпроврке блока";
             this.buttonAddInspection.UseVisualStyleBackColor = true;
@@ -330,9 +356,10 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(439, 389);
+            this.buttonExit.Location = new System.Drawing.Point(605, 555);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(175, 60);
+            this.buttonExit.Size = new System.Drawing.Size(233, 75);
             this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "Выйти";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -350,21 +377,24 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 26);
+            this.panel2.Location = new System.Drawing.Point(16, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(436, 348);
+            this.panel2.Size = new System.Drawing.Size(581, 515);
             this.panel2.TabIndex = 14;
             // 
             // InspectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 461);
+            this.ClientSize = new System.Drawing.Size(1115, 652);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonAddInspection);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InspectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Проверка блока";

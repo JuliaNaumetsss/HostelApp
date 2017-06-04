@@ -10,7 +10,7 @@ namespace HostelApplication.DataAccessLayer
     {
         public bool AddPaymentInformation(Payment info)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSucces = true;
             int sum = this.GetPaymentSumForStudentByLogin(info.StudentId) + info.PaymentSum;
 

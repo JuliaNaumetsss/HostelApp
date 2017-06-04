@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbFloor = new System.Windows.Forms.ComboBox();
@@ -35,8 +37,6 @@
             this.cmbStudent = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.ThingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAddThing = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbThingCount = new System.Windows.Forms.ComboBox();
@@ -48,6 +48,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.ThingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,44 +57,49 @@
             // 
             // dateTime
             // 
-            this.dateTime.Location = new System.Drawing.Point(150, 31);
+            this.dateTime.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTime.Location = new System.Drawing.Point(155, 32);
             this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(200, 26);
+            this.dateTime.Size = new System.Drawing.Size(315, 33);
             this.dateTime.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 37);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(20, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Дата выдачи";
             // 
             // cmbFloor
             // 
+            this.cmbFloor.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbFloor.FormattingEnabled = true;
-            this.cmbFloor.Location = new System.Drawing.Point(150, 88);
+            this.cmbFloor.Location = new System.Drawing.Point(155, 89);
             this.cmbFloor.Name = "cmbFloor";
-            this.cmbFloor.Size = new System.Drawing.Size(200, 28);
+            this.cmbFloor.Size = new System.Drawing.Size(315, 33);
             this.cmbFloor.TabIndex = 2;
             this.cmbFloor.SelectedIndexChanged += new System.EventHandler(this.cmbFloor_SelectedIndexChanged);
             // 
             // cmbRoom
             // 
+            this.cmbRoom.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbRoom.FormattingEnabled = true;
-            this.cmbRoom.Location = new System.Drawing.Point(150, 147);
+            this.cmbRoom.Location = new System.Drawing.Point(155, 148);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(200, 28);
+            this.cmbRoom.Size = new System.Drawing.Size(315, 33);
             this.cmbRoom.TabIndex = 3;
             this.cmbRoom.SelectedIndexChanged += new System.EventHandler(this.cmbRoom_SelectedIndexChanged);
             // 
             // cmbStudent
             // 
+            this.cmbStudent.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbStudent.FormattingEnabled = true;
-            this.cmbStudent.Location = new System.Drawing.Point(150, 211);
+            this.cmbStudent.Location = new System.Drawing.Point(155, 212);
             this.cmbStudent.Name = "cmbStudent";
-            this.cmbStudent.Size = new System.Drawing.Size(200, 28);
+            this.cmbStudent.Size = new System.Drawing.Size(315, 33);
             this.cmbStudent.TabIndex = 4;
             // 
             // panel1
@@ -104,45 +111,48 @@
             this.panel1.Controls.Add(this.cmbThingCount);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbThing);
-            this.panel1.Location = new System.Drawing.Point(497, 12);
+            this.panel1.Location = new System.Drawing.Point(505, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 372);
+            this.panel1.Size = new System.Drawing.Size(801, 427);
             this.panel1.TabIndex = 5;
             // 
             // dataGridView
             // 
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ThingName,
             this.Count});
-            this.dataGridView.Location = new System.Drawing.Point(417, 17);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView.Location = new System.Drawing.Point(416, 26);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowTemplate.Height = 28;
-            this.dataGridView.Size = new System.Drawing.Size(354, 340);
+            this.dataGridView.Size = new System.Drawing.Size(382, 375);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView_UserDeletingRow);
             // 
-            // ThingName
-            // 
-            this.ThingName.HeaderText = "Название вещи";
-            this.ThingName.Name = "ThingName";
-            this.ThingName.ReadOnly = true;
-            this.ThingName.Width = 200;
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Количество";
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
-            this.Count.Width = 110;
-            // 
             // buttonAddThing
             // 
-            this.buttonAddThing.Location = new System.Drawing.Point(123, 147);
+            this.buttonAddThing.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddThing.Location = new System.Drawing.Point(118, 153);
             this.buttonAddThing.Name = "buttonAddThing";
-            this.buttonAddThing.Size = new System.Drawing.Size(144, 39);
+            this.buttonAddThing.Size = new System.Drawing.Size(168, 39);
             this.buttonAddThing.TabIndex = 4;
             this.buttonAddThing.Text = "Добавить";
             this.buttonAddThing.UseVisualStyleBackColor = true;
@@ -151,43 +161,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 86);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(13, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 20);
+            this.label3.Size = new System.Drawing.Size(188, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Количество вещей";
             // 
             // cmbThingCount
             // 
             this.cmbThingCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThingCount.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbThingCount.FormattingEnabled = true;
-            this.cmbThingCount.Location = new System.Drawing.Point(186, 79);
+            this.cmbThingCount.Location = new System.Drawing.Point(231, 84);
             this.cmbThingCount.Name = "cmbThingCount";
-            this.cmbThingCount.Size = new System.Drawing.Size(179, 28);
+            this.cmbThingCount.Size = new System.Drawing.Size(179, 33);
             this.cmbThingCount.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 20);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(9, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.Size = new System.Drawing.Size(205, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Наименование вещи";
             // 
             // cmbThing
             // 
             this.cmbThing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThing.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbThing.FormattingEnabled = true;
-            this.cmbThing.Location = new System.Drawing.Point(186, 17);
+            this.cmbThing.Location = new System.Drawing.Point(231, 26);
             this.cmbThing.Name = "cmbThing";
-            this.cmbThing.Size = new System.Drawing.Size(179, 28);
+            this.cmbThing.Size = new System.Drawing.Size(179, 33);
             this.cmbThing.TabIndex = 0;
             this.cmbThing.SelectedIndexChanged += new System.EventHandler(this.cmbThing_SelectedIndexChanged);
             // 
             // buttonAddRecord
             // 
-            this.buttonAddRecord.Location = new System.Drawing.Point(256, 404);
+            this.buttonAddRecord.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddRecord.Location = new System.Drawing.Point(257, 445);
             this.buttonAddRecord.Name = "buttonAddRecord";
             this.buttonAddRecord.Size = new System.Drawing.Size(323, 63);
             this.buttonAddRecord.TabIndex = 6;
@@ -206,41 +221,45 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.cmbFloor);
             this.panel2.Controls.Add(this.cmbRoom);
-            this.panel2.Location = new System.Drawing.Point(46, 12);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 372);
+            this.panel2.Size = new System.Drawing.Size(487, 427);
             this.panel2.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 218);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(28, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(90, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Студент";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 154);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(24, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.Size = new System.Drawing.Size(92, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Комната";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 95);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(24, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Этаж";
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(620, 404);
+            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.Location = new System.Drawing.Point(620, 445);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(323, 63);
             this.buttonExit.TabIndex = 8;
@@ -248,12 +267,26 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // ThingName
+            // 
+            this.ThingName.HeaderText = "Название вещи";
+            this.ThingName.Name = "ThingName";
+            this.ThingName.ReadOnly = true;
+            this.ThingName.Width = 210;
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "Количество";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            this.Count.Width = 125;
+            // 
             // AddThingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1283, 471);
+            this.ClientSize = new System.Drawing.Size(1318, 520);
             this.ControlBox = false;
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.panel2);
@@ -290,8 +323,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
-        private System.Windows.Forms.Button buttonExit;
     }
 }

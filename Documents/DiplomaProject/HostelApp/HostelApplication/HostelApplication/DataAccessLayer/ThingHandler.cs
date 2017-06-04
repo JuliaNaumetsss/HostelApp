@@ -92,7 +92,7 @@ namespace HostelApplication.DataAccessLayer
 
         private bool WorkWithRecords(string query)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {

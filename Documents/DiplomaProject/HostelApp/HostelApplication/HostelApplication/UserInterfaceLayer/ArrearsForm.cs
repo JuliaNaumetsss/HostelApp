@@ -216,7 +216,7 @@ namespace HostelApplication.UserInterfaceLayer
             tbExpectedSum.Visible = true;
             tbHoursCount.Visible = false;
             dataGridViewDebtors.Columns[3].HeaderText = "Оплаченная сумма";
-            dataGridViewDebtors.Columns[4].HeaderText = "Необходимое сумма";
+            dataGridViewDebtors.Columns[4].HeaderText = "Необходимая сумма";
         }
 
         private void buttonOpenFile_Click(object sender, EventArgs e)

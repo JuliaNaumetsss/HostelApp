@@ -7,7 +7,7 @@ namespace HostelApplication.Handler
     {
         public bool RemoveEmployee(string login)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -45,7 +45,7 @@ namespace HostelApplication.Handler
 
         public bool RemoveStudent(string login)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;            
             try
             {

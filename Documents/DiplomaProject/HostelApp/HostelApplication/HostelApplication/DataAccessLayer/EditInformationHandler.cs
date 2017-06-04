@@ -8,7 +8,7 @@ namespace HostelApplication.Handler
     {
         public bool EditStudent(Student student)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {
@@ -45,7 +45,7 @@ namespace HostelApplication.Handler
 
         public bool EditEmployee(Employee employee)
         {
-            AddEtitDataInDataBase hdl = new AddEtitDataInDataBase();
+            AddEditDataInDataBase hdl = new AddEditDataInDataBase();
             bool isSuccess = true;
             try
             {
